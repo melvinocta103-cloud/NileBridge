@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions — NileBridge University</title>
+  <meta name="description" content="Find answers to common questions about NileBridge admissions, entry requirements, tuition fees, scholarships, and campus housing.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+256414123456"><i class="fas fa-phone-alt"></i> +256 414 123 456</a>
+        <a href="mailto:admissions@nilebridge.edu"><i class="fas fa-envelope"></i> admissions@nilebridge.edu</a>
+      </div>
+      <div class="topbar-right">
+        <a href="portal/login.html" style="font-weight: var(--fw-semibold); color: var(--clr-gold);"><i class="fas fa-user-circle"></i> Applicant Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div style="width: 44px; height: 44px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: bold;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NileBridge</span>
+          <span class="brand-tagline">University</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="faculties.html" class="nav-link">Faculties</a></div>
+        <div class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></div>
+        <div class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></div>
+        <div class="nav-item"><a href="news.html" class="nav-link">News & Events</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="portal/login.html" class="btn btn-outline btn-sm hide-mobile">Log In</a>
+        <a href="portal/apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+        <div class="hamburger" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">FAQs</span>
+      </div>
+      <h1>Frequently Asked Questions</h1>
+      <p>Instant answers to the most common queries from prospective students, applicants, and guardians.</p>
+    </div>
+  </section>
+
+  <!-- Search & FAQ Accordion -->
+  <section class="section">
+    <div class="container container-narrow">
+      <!-- Live Search Input -->
+      <div style="margin-bottom: var(--sp-8);">
+        <input type="text" id="faqSearchInput" class="form-control" placeholder="Search questions (e.g. scholarships, installment, visa, deadline)..." style="font-size: var(--fs-md); padding: var(--sp-4);">
+      </div>
+
+      <!-- FAQ Container -->
+      <div class="accordion" id="faqAccordionContainer">
+        <!-- Rendered by JS / Data -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-graduation-cap" style="color: var(--clr-gold);"></i> NileBridge University</div>
+          <p>Delivering high-impact academic education and ethical leadership development across Africa.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Academic Catalog</a>
+            <a href="faculties.html">Faculties</a>
+            <a href="campuses.html">Campuses</a>
+          </div>
+        </div>
+        <div>
+          <h4>Admissions</h4>
+          <div class="footer-links">
+            <a href="admissions.html">Requirements</a>
+            <a href="admissions.html#fees">Fees</a>
+            <a href="portal/apply.html">Apply Online</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-envelope"></i> info@nilebridge.edu</p>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-phone"></i> +256 414 123 456</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NileBridge University. Chartered by NCHE. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="admin/index.html">Admin CMS</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const container = document.getElementById('faqAccordionContainer');
+      const searchInput = document.getElementById('faqSearchInput');
+      const faqs = window.NileBridgeData?.faqs || [];
+
+      function renderFaqs(list) {
+        container.innerHTML = '';
+        if (!list.length) {
+          container.innerHTML = `<p style="text-align: center; color: var(--clr-text-muted); padding: 40px;">No questions found matching your search term.</p>`;
+          return;
+        }
+
+        list.forEach((faq, idx) => {
+          container.innerHTML += `
+            <div class="accordion-item ${idx === 0 ? 'active' : ''}">
+              <div class="accordion-header">
+                <div>
+                  <span class="card-badge card-badge-primary" style="margin-bottom: 4px;">${faq.category}</span>
+                  <h3>${faq.question}</h3>
+                </div>
+                <i class="fas fa-chevron-down accordion-icon"></i>
+              </div>
+              <div class="accordion-body" style="${idx === 0 ? 'max-height: 400px;' : ''}">
+                <div class="accordion-body-inner">
+                  <p style="color: var(--clr-text); line-height: var(--lh-relaxed); margin-bottom: 0;">${faq.answer}</p>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
+        // Re-initialize accordion click listeners
+        initAccordions();
+      }
+
+      searchInput.addEventListener('input', (e) => {
+        const q = e.target.value.toLowerCase().trim();
+        const filtered = faqs.filter(f => 
+          f.question.toLowerCase().includes(q) || 
+          f.answer.toLowerCase().includes(q) ||
+          f.category.toLowerCase().includes(q)
+        );
+        renderFaqs(filtered);
+      });
+
+      renderFaqs(faqs);
+    });
+  </script>
+</body>
+</html>

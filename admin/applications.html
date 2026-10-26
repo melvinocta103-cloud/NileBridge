@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applications Review Suite — NileBridge Admin</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-layout">
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <div style="width: 38px; height: 38px; background: linear-gradient(135deg, var(--clr-accent), #991B1B); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+          <i class="fas fa-shield-halved"></i>
+        </div>
+        <div>
+          <div style="font-family: var(--ff-heading); font-size: 16px; font-weight: bold; color: white;">NileBridge Admin</div>
+          <div style="font-size: 11px; color: #94A3B8;">Admissions Platform</div>
+        </div>
+      </div>
+
+      <nav class="admin-sidebar-nav">
+        <div class="admin-nav-category">Admissions & Students</div>
+        <a href="index.html" class="admin-nav-link"><i class="fas fa-chart-pie"></i> Executive Overview</a>
+        <a href="applications.html" class="admin-nav-link active"><i class="fas fa-id-card-clip"></i> Applications Review <span class="badge-num">5</span></a>
+        <a href="reports.html" class="admin-nav-link"><i class="fas fa-chart-line"></i> Enrollment Reports</a>
+
+        <div class="admin-nav-category">Academic CMS</div>
+        <a href="programmes.html" class="admin-nav-link"><i class="fas fa-book-bookmark"></i> Programmes CMS</a>
+        <a href="news.html" class="admin-nav-link"><i class="fas fa-newspaper"></i> News & Announcements</a>
+
+        <div class="admin-nav-category">System</div>
+        <a href="../index.html" class="admin-nav-link"><i class="fas fa-globe"></i> View Public Website</a>
+        <a href="../portal/dashboard.html" class="admin-nav-link"><i class="fas fa-user-graduate"></i> View Applicant Portal</a>
+      </nav>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <main class="admin-main">
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <h2 style="font-size: 18px; margin: 0; color: white;">Applications Management & Decision Suite</h2>
+        </div>
+        <button class="btn btn-sm btn-primary" onclick="alert('Exporting Applications list to CSV...');"><i class="fas fa-file-csv"></i> Export CSV</button>
+      </header>
+
+      <!-- Content -->
+      <div class="admin-page-content">
+        <!-- Applications Card with Toolbar -->
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <!-- Filter Pills -->
+            <div class="admin-filter-bar">
+              <button class="btn btn-sm btn-outline-white admin-filter-btn active" data-status="ALL">All Applications</button>
+              <button class="btn btn-sm btn-outline-white admin-filter-btn" data-status="SUBMITTED">Submitted</button>
+              <button class="btn btn-sm btn-outline-white admin-filter-btn" data-status="DOCUMENT_REVIEW">Doc Review</button>
+              <button class="btn btn-sm btn-outline-white admin-filter-btn" data-status="UNDER_REVIEW">Faculty Review</button>
+              <button class="btn btn-sm btn-outline-white admin-filter-btn" data-status="APPROVED">Approved</button>
+              <button class="btn btn-sm btn-outline-white admin-filter-btn" data-status="REJECTED">Rejected</button>
+            </div>
+
+            <!-- Search Box -->
+            <input type="text" id="adminAppSearch" class="admin-search-input" placeholder="Search by name, ID, email, or degree...">
+          </div>
+
+          <!-- Applications Table -->
+          <div style="overflow-x: auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Application Ref</th>
+                  <th>Applicant Name & Email</th>
+                  <th>Degree Programme</th>
+                  <th>Campus</th>
+                  <th>Submitted</th>
+                  <th>Current Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminApplicationsTableBody">
+                <!-- Dynamically populated and filtered by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

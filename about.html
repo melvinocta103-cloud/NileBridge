@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About NileBridge University — Heritage, Vision & Leadership</title>
+  <meta name="description" content="Discover the history, leadership, vision, and core values that drive academic excellence and innovation at NileBridge University.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+256414123456"><i class="fas fa-phone-alt"></i> +256 414 123 456</a>
+        <a href="mailto:admissions@nilebridge.edu"><i class="fas fa-envelope"></i> admissions@nilebridge.edu</a>
+      </div>
+      <div class="topbar-right">
+        <a href="portal/login.html" style="font-weight: var(--fw-semibold); color: var(--clr-gold);"><i class="fas fa-user-circle"></i> Applicant Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div style="width: 44px; height: 44px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: bold;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NileBridge</span>
+          <span class="brand-tagline">University</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item has-dropdown">
+          <a href="about.html" class="nav-link active">About <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="nav-dropdown">
+            <a href="about.html">About NileBridge</a>
+            <a href="about.html#leadership">Leadership & Governance</a>
+            <a href="about.html#history">History & Heritage</a>
+            <a href="campuses.html">Campuses & Facilities</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="faculties.html" class="nav-link">Faculties</a></div>
+        <div class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></div>
+        <div class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></div>
+        <div class="nav-item"><a href="news.html" class="nav-link">News & Events</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="portal/login.html" class="btn btn-outline btn-sm hide-mobile">Log In</a>
+        <a href="portal/apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+        <div class="hamburger" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="deco-circle deco-circle-1"></div>
+    <div class="deco-circle deco-circle-2"></div>
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">About Institution</span>
+      </div>
+      <h1>About NileBridge University</h1>
+      <p>Pioneering high-impact higher education, innovative research, and ethical leadership development since 1998.</p>
+    </div>
+  </section>
+
+  <!-- Mission, Vision, Values -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3">
+        <div class="card icon-card">
+          <div class="icon-wrapper"><i class="fas fa-bullseye"></i></div>
+          <h3>Our Mission</h3>
+          <p>To cultivate visionary thinkers, ethical professionals, and tech innovators who drive socio-economic transformation across Africa and the global landscape.</p>
+        </div>
+
+        <div class="card icon-card">
+          <div class="icon-wrapper"><i class="fas fa-eye"></i></div>
+          <h3>Our Vision</h3>
+          <p>To be the premier digital-first, research-intensive university in Africa renowned for academic rigor, innovation ecosystems, and graduate employability.</p>
+        </div>
+
+        <div class="card icon-card">
+          <div class="icon-wrapper"><i class="fas fa-gem"></i></div>
+          <h3>Core Values</h3>
+          <p>Excellence · Integrity · Innovation · Inclusivity · Global Impact. Anchoring every academic programme and student endeavor.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heritage Timeline -->
+  <section class="section section-alt" id="history">
+    <div class="container">
+      <div class="section-header-doodle">
+        <h2 class="section-title">Our Heritage & Milestones</h2>
+        <svg class="doodle-swirl" viewBox="0 0 140 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12C35 2 70 20 100 8C115 2 125 15 135 10" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="timeline" style="max-width: 800px; margin: 0 auto;">
+        <div class="timeline-item">
+          <div class="timeline-year">1998</div>
+          <h4>Foundation of Nile Institute of Technology</h4>
+          <p>Established with an initial cohort of 120 students focused on applied computing and commercial management sciences.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2008</div>
+          <h4>Award of Full University Charter by NCHE</h4>
+          <p>Granted full presidential charter and accreditation as NileBridge University, establishing the School of Law and Faculty of Health Sciences.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2018</div>
+          <h4>Expansion & Jinja Innovation Park</h4>
+          <p>Inauguration of the Jinja Tech Park, bringing robotics, software development, and renewable energy research facilities.</p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-year">2026</div>
+          <h4>Digital Admissions & Institutional Platform</h4>
+          <p>Launch of the upgraded digital admissions and student portal, serving over 12,000 active scholars across 3 campuses.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership & Governance -->
+  <section class="section" id="leadership">
+    <div class="container">
+      <div class="section-header-doodle">
+        <h2 class="section-title">Institutional Leadership</h2>
+        <svg class="doodle-swirl" viewBox="0 0 140 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12C35 2 70 20 100 8C115 2 125 15 135 10" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p class="section-subtitle mx-auto" style="max-width: 600px; color: var(--clr-text-muted);">Guided by distinguished scholars, seasoned jurists, and industry executives.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card leader-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Vice Chancellor">
+          <div class="card-body">
+            <h3 class="card-title">Prof. Grace N. Tumusiime, Ph.D.</h3>
+            <p style="color: var(--clr-accent); font-weight: var(--fw-semibold); margin-bottom: var(--sp-2);">Vice Chancellor</p>
+            <p class="card-text">Leading academic governance, strategic global partnerships, and institutional research expansion.</p>
+          </div>
+        </div>
+
+        <div class="card leader-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Deputy Vice Chancellor">
+          <div class="card-body">
+            <h3 class="card-title">Prof. Arthur K. Mugabe, Ph.D.</h3>
+            <p style="color: var(--clr-accent); font-weight: var(--fw-semibold); margin-bottom: var(--sp-2);">Deputy Vice Chancellor (Academics)</p>
+            <p class="card-text">Spearheading digital learning systems, curriculum calibration, and STEM research initiatives.</p>
+          </div>
+        </div>
+
+        <div class="card leader-card">
+          <img class="card-img" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" alt="University Registrar">
+          <div class="card-body">
+            <h3 class="card-title">Dr. Julian K. Mbabazi, Ed.D</h3>
+            <p style="color: var(--clr-accent); font-weight: var(--fw-semibold); margin-bottom: var(--sp-2);">Academic Registrar</p>
+            <p class="card-text">Overseeing admissions directorates, student records, examinations, and quality assurance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Join Our Growing Community of Scholars</h2>
+      <p>Discover academic programmes designed for tomorrow's leaders. Apply for the September 2026 intake.</p>
+      <a href="portal/apply.html" class="btn btn-outline-white btn-lg">Start Your Application &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-graduation-cap" style="color: var(--clr-gold);"></i> NileBridge University</div>
+          <p>Empowering Leaders, Transforming Africa through world-class academic education and cutting-edge research.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Academic Catalog</a>
+            <a href="faculties.html">Faculties & Schools</a>
+            <a href="campuses.html">Campuses</a>
+          </div>
+        </div>
+        <div>
+          <h4>Admissions</h4>
+          <div class="footer-links">
+            <a href="admissions.html">Requirements</a>
+            <a href="admissions.html#fees">Tuition Fees</a>
+            <a href="admissions.html#scholarships">Scholarships</a>
+            <a href="portal/apply.html">Apply Online</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-envelope"></i> info@nilebridge.edu</p>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-phone"></i> +256 414 123 456</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NileBridge University. Chartered by NCHE. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="admin/index.html">Admin CMS</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

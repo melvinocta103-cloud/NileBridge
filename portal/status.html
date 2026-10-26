@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Status & Tracking — NileBridge Portal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body class="portal-body">
+
+  <!-- Portal Header -->
+  <header class="portal-header">
+    <div class="container-fluid">
+      <a href="../index.html" class="portal-brand">
+        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span style="font-family: var(--ff-heading); font-size: 18px; font-weight: bold;">NileBridge</span>
+        <span class="badge-tag">Status Tracker</span>
+      </a>
+
+      <div class="portal-user-menu">
+        <div class="user-avatar-badge">SK</div>
+        <div class="hide-mobile">
+          <div class="active-user-name" style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">Samuel Kintu</div>
+        </div>
+        <a href="dashboard.html" class="btn btn-sm btn-outline" style="margin-left: 8px;"><i class="fas fa-arrow-left"></i> Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portal Layout -->
+  <div class="portal-wrapper">
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <a href="dashboard.html" class="portal-nav-item"><i class="fas fa-gauge-high"></i> Dashboard</a>
+      <a href="apply.html" class="portal-nav-item"><i class="fas fa-wand-magic-sparkles"></i> New Application</a>
+      <a href="status.html" class="portal-nav-item active"><i class="fas fa-timeline"></i> Status & Offer Letter</a>
+      <a href="documents.html" class="portal-nav-item"><i class="fas fa-folder-open"></i> Document Center</a>
+      <a href="notifications.html" class="portal-nav-item"><i class="fas fa-bell"></i> Alerts <span class="badge-count">2</span></a>
+      <div style="margin-top: auto; padding-top: var(--sp-4); border-top: 1px solid var(--clr-border);">
+        <a href="../index.html" class="portal-nav-item"><i class="fas fa-arrow-left"></i> Return to Website</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="portal-main" id="applicantStatusView">
+      <div class="flex-between" style="margin-bottom: var(--sp-6); flex-wrap: wrap; gap: 10px;">
+        <div>
+          <h1 style="font-size: var(--fs-2xl); color: var(--clr-primary); margin-bottom: 4px;">Live Application Tracker</h1>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted);">Real-time tracking of admissions milestones for Application <strong id="statusAppId" style="color: var(--clr-accent);">APP-2026-000123</strong></p>
+        </div>
+        <button class="btn btn-outline btn-sm" onclick="location.reload();"><i class="fas fa-rotate-right"></i> Refresh Status</button>
+      </div>
+
+      <!-- Offer Letter Download Box (Shown when Approved) -->
+      <div id="offerLetterDownloadBox" class="card" style="display: none; padding: var(--sp-6); background: #ECFDF5; border: 2px solid #10B981; margin-bottom: var(--sp-8);">
+        <div class="flex-between" style="flex-wrap: wrap; gap: 12px;">
+          <div style="display: flex; align-items: center; gap: 16px;">
+            <div style="width: 50px; height: 50px; border-radius: 50%; background: #10B981; color: white; display: flex; align-items: center; justify-content: center; font-size: 24px;">
+              <i class="fas fa-award"></i>
+            </div>
+            <div>
+              <h3 style="color: #065F46; font-size: var(--fs-lg); margin-bottom: 2px;">Official Admission Letter Issued!</h3>
+              <p style="color: #047857; font-size: var(--fs-sm); margin-bottom: 0;">Congratulations on your admission to NileBridge University. Your official admission package is ready.</p>
+            </div>
+          </div>
+          <button class="btn btn-primary" onclick="alert('Downloading Official NileBridge Admission Letter & Enrollment Package (PDF)...');"><i class="fas fa-file-pdf"></i> Download Offer Letter</button>
+        </div>
+      </div>
+
+      <!-- Application Details Summary Card -->
+      <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border); margin-bottom: var(--sp-8);">
+        <div class="grid grid-3">
+          <div>
+            <div style="font-size: var(--fs-xs); color: var(--clr-text-light); text-transform: uppercase;">Selected Programme:</div>
+            <div id="statusProgName" style="font-weight: bold; font-size: var(--fs-base); color: var(--clr-primary);">BSc in Computer Science</div>
+          </div>
+          <div>
+            <div style="font-size: var(--fs-xs); color: var(--clr-text-light); text-transform: uppercase;">Assigned Campus:</div>
+            <div id="statusCampus" style="font-weight: bold; font-size: var(--fs-base); color: var(--clr-primary);">Riverfront Main Campus</div>
+          </div>
+          <div>
+            <div style="font-size: var(--fs-xs); color: var(--clr-text-light); text-transform: uppercase;">Academic Intake:</div>
+            <div id="statusIntake" style="font-weight: bold; font-size: var(--fs-base); color: var(--clr-primary);">September 2026</div>
+          </div>
+        </div>
+
+        <div style="margin-top: var(--sp-4); padding-top: var(--sp-4); border-top: 1px solid var(--clr-border); font-size: var(--fs-sm);">
+          <strong>Admissions Officer Remarks:</strong> <span id="statusRemarks" style="color: var(--clr-text-muted);">Under review.</span>
+        </div>
+      </div>
+
+      <!-- Milestone Timeline Card -->
+      <div class="card" style="padding: var(--sp-8); border: 1px solid var(--clr-border);">
+        <h3 style="font-size: var(--fs-lg); margin-bottom: var(--sp-8);"><i class="fas fa-route"></i> Milestone Progression</h3>
+
+        <div class="portal-timeline">
+          <!-- Stage 1 -->
+          <div class="portal-timeline-item done">
+            <div class="portal-timeline-dot"><i class="fas fa-check" style="font-size: 11px;"></i></div>
+            <h4 style="font-size: var(--fs-base); margin-bottom: 2px;">1. Application Received & Logged</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: 0;">Online application and initial documents successfully registered in central admissions database.</p>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="portal-timeline-item done">
+            <div class="portal-timeline-dot"><i class="fas fa-check" style="font-size: 11px;"></i></div>
+            <h4 style="font-size: var(--fs-base); margin-bottom: 2px;">2. Academic Document Screening</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: 0;">Certificates and academic transcripts verified against NCHE entry standards.</p>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="portal-timeline-item active">
+            <div class="portal-timeline-dot"><i class="fas fa-spinner fa-spin" style="font-size: 11px;"></i></div>
+            <h4 style="font-size: var(--fs-base); color: var(--clr-accent); margin-bottom: 2px;">3. Faculty Committee Evaluation (In Progress)</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: 0;">Department Admissions Committee is evaluating specific subject combinations and class quotas.</p>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="portal-timeline-item">
+            <div class="portal-timeline-dot"><i class="fas fa-lock" style="font-size: 11px;"></i></div>
+            <h4 style="font-size: var(--fs-base); color: var(--clr-text-light); margin-bottom: 2px;">4. Final Decision & Official Letter</h4>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-light); margin-bottom: 0;">Issuance of official digital admission letter, student registration number, and fee invoices.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/portal.js"></script>
+</body>
+</html>

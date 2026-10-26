@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BSc in Computer Science — NileBridge University</title>
+  <meta name="description" content="Study Bachelor of Science in Computer Science at NileBridge University. Master software engineering, cloud computing, AI, and cybersecurity.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+256414123456"><i class="fas fa-phone-alt"></i> +256 414 123 456</a>
+        <a href="mailto:admissions@nilebridge.edu"><i class="fas fa-envelope"></i> admissions@nilebridge.edu</a>
+      </div>
+      <div class="topbar-right">
+        <a href="portal/login.html" style="font-weight: var(--fw-semibold); color: var(--clr-gold);"><i class="fas fa-user-circle"></i> Applicant Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div style="width: 44px; height: 44px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: bold;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NileBridge</span>
+          <span class="brand-tagline">University</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="faculties.html" class="nav-link">Faculties</a></div>
+        <div class="nav-item"><a href="programmes.html" class="nav-link active">Programmes</a></div>
+        <div class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></div>
+        <div class="nav-item"><a href="news.html" class="nav-link">News & Events</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="portal/login.html" class="btn btn-outline btn-sm hide-mobile">Log In</a>
+        <a href="portal/apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+        <div class="hamburger" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Programme Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <a href="programmes.html">Programmes</a>
+        <span class="separator">/</span>
+        <span class="current">BSc in Computer Science</span>
+      </div>
+      <div style="display: flex; gap: 8px; margin-bottom: 12px;">
+        <span class="card-badge card-badge-primary">Undergraduate Degree</span>
+        <span class="card-badge card-badge-accent">Faculty of Science & Technology</span>
+      </div>
+      <h1 style="font-size: var(--fs-4xl); margin-bottom: var(--sp-4);">Bachelor of Science in Computer Science</h1>
+      <p style="max-width: 700px;">Master algorithms, full-stack software architecture, cloud platforms, and AI engineering in a high-demand tech curriculum.</p>
+    </div>
+  </section>
+
+  <!-- Main Programme Detail Split -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-split-60" style="align-items: flex-start;">
+        <!-- Left Main Content -->
+        <div>
+          <!-- Overview -->
+          <div style="margin-bottom: var(--sp-10);">
+            <h2 style="font-size: var(--fs-2xl); margin-bottom: var(--sp-4); color: var(--clr-primary);">Programme Overview</h2>
+            <p style="color: var(--clr-text); font-size: var(--fs-base); line-height: var(--lh-relaxed); margin-bottom: var(--sp-4);">
+              The Bachelor of Science in Computer Science at NileBridge University is calibrated to produce world-class software engineers, systems architects, and technology innovators.
+            </p>
+            <p style="color: var(--clr-text-muted); font-size: var(--fs-base); line-height: var(--lh-relaxed); margin-bottom: var(--sp-6);">
+              Students develop deep competencies in algorithmic problem solving, distributed computing, database management, DevOps pipelines, and machine learning while working in state-of-the-art incubation labs.
+            </p>
+          </div>
+
+          <!-- Curriculum Structure Tabs -->
+          <div style="margin-bottom: var(--sp-10);" data-tabs>
+            <h2 style="font-size: var(--fs-2xl); margin-bottom: var(--sp-4); color: var(--clr-primary);">Curriculum Structure</h2>
+            
+            <div class="tabs">
+              <button class="tab-btn active" data-tab-target="#tabYear1">Year 1</button>
+              <button class="tab-btn" data-tab-target="#tabYear2">Year 2</button>
+              <button class="tab-btn" data-tab-target="#tabYear3">Year 3 (Final)</button>
+            </div>
+
+            <!-- Year 1 Panel -->
+            <div class="tab-panel active" id="tabYear1">
+              <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border); margin-bottom: var(--sp-4);">
+                <h4 style="color: var(--clr-accent); margin-bottom: var(--sp-3);">Semester 1</h4>
+                <ul style="list-style: disc; padding-left: 20px; line-height: 1.8; color: var(--clr-text);">
+                  <li>Introduction to Computer Science & Python Programming</li>
+                  <li>Discrete Mathematics for Computing</li>
+                  <li>Computer Architecture & Hardware Organization</li>
+                  <li>Communication Skills & Academic Writing</li>
+                  <li>Digital Logic Design</li>
+                </ul>
+              </div>
+
+              <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border);">
+                <h4 style="color: var(--clr-accent); margin-bottom: var(--sp-3);">Semester 2</h4>
+                <ul style="list-style: disc; padding-left: 20px; line-height: 1.8; color: var(--clr-text);">
+                  <li>Object-Oriented Programming (Java & C++)</li>
+                  <li>Data Structures & Algorithms</li>
+                  <li>Linear Algebra & Calculus for Computing</li>
+                  <li>Web Technologies & UI/UX Design</li>
+                  <li>Database Management Systems (SQL & NoSQL)</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Year 2 Panel -->
+            <div class="tab-panel" id="tabYear2">
+              <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border); margin-bottom: var(--sp-4);">
+                <h4 style="color: var(--clr-accent); margin-bottom: var(--sp-3);">Semester 1</h4>
+                <ul style="list-style: disc; padding-left: 20px; line-height: 1.8; color: var(--clr-text);">
+                  <li>Software Engineering Principles & Agile Methodologies</li>
+                  <li>Operating Systems & Concurrency</li>
+                  <li>Computer Networks & Protocols</li>
+                  <li>Advanced Algorithms Analysis</li>
+                  <li>Mobile Application Development (Flutter / React Native)</li>
+                </ul>
+              </div>
+
+              <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border);">
+                <h4 style="color: var(--clr-accent); margin-bottom: var(--sp-3);">Semester 2</h4>
+                <ul style="list-style: disc; padding-left: 20px; line-height: 1.8; color: var(--clr-text);">
+                  <li>Cloud Computing & Microservices Architecture</li>
+                  <li>Artificial Intelligence & Machine Learning Fundamentals</li>
+                  <li>Distributed Systems & Parallel Programming</li>
+                  <li>Software Testing & Quality Assurance</li>
+                  <li>Mandatory Industry Internship I</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Year 3 Panel -->
+            <div class="tab-panel" id="tabYear3">
+              <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border); margin-bottom: var(--sp-4);">
+                <h4 style="color: var(--clr-accent); margin-bottom: var(--sp-3);">Semester 1</h4>
+                <ul style="list-style: disc; padding-left: 20px; line-height: 1.8; color: var(--clr-text);">
+                  <li>Cybersecurity & Cryptography</li>
+                  <li>DevOps, CI/CD & Container Orchestration (Docker/Kubernetes)</li>
+                  <li>Data Science & Big Data Engineering</li>
+                  <li>Capstone Engineering Project I</li>
+                </ul>
+              </div>
+
+              <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border);">
+                <h4 style="color: var(--clr-accent); margin-bottom: var(--sp-3);">Semester 2</h4>
+                <ul style="list-style: disc; padding-left: 20px; line-height: 1.8; color: var(--clr-text);">
+                  <li>Technology Entrepreneurship & Tech Law</li>
+                  <li>Human-Computer Interaction & Advanced AI Elective</li>
+                  <li>Internet of Things (IoT) & Embedded Systems</li>
+                  <li>Capstone Project II / Final Defense</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Entry Requirements -->
+          <div style="margin-bottom: var(--sp-10);" id="requirements">
+            <h2 style="font-size: var(--fs-2xl); margin-bottom: var(--sp-4); color: var(--clr-primary);">Admission Requirements</h2>
+            <div class="card" style="padding: var(--sp-6); border-left: 4px solid var(--clr-accent); background: var(--clr-surface);">
+              <h4 style="margin-bottom: var(--sp-2);">Direct Entry (High School Leavers)</h4>
+              <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-4);">Uganda Advanced Certificate of Education (UACE) with at least two principal passes in Mathematics and Physics (or Economics/Chemistry/Biology), plus credit in English and Math at O-Level (UCE).</p>
+
+              <h4 style="margin-bottom: var(--sp-2);">Diploma Entry (Mature & Fast-Track)</h4>
+              <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-4);">Recognized Diploma in Computer Science, IT, Electrical Engineering, or Telecommunications with at least a Credit class (admits directly to Year 2).</p>
+
+              <h4 style="margin-bottom: var(--sp-2);">International Applicants</h4>
+              <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: 0;">International Baccalaureate (IB), Cambridge A-Levels, or equivalent foreign secondary qualification evaluated by UNEB.</p>
+            </div>
+          </div>
+
+          <!-- Career Paths -->
+          <div>
+            <h2 style="font-size: var(--fs-2xl); margin-bottom: var(--sp-4); color: var(--clr-primary);">Career Opportunities</h2>
+            <div class="grid grid-2">
+              <div class="feature-item" style="border: 1px solid var(--clr-border);">
+                <div class="feature-icon"><i class="fas fa-code"></i></div>
+                <div class="feature-content">
+                  <h4>Software Architect</h4>
+                  <p>Lead scalable enterprise engineering teams.</p>
+                </div>
+              </div>
+              <div class="feature-item" style="border: 1px solid var(--clr-border);">
+                <div class="feature-icon"><i class="fas fa-brain"></i></div>
+                <div class="feature-content">
+                  <h4>AI & ML Specialist</h4>
+                  <p>Build intelligent models and data pipelines.</p>
+                </div>
+              </div>
+              <div class="feature-item" style="border: 1px solid var(--clr-border);">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="feature-content">
+                  <h4>Cybersecurity Analyst</h4>
+                  <p>Protect critical digital infrastructure.</p>
+                </div>
+              </div>
+              <div class="feature-item" style="border: 1px solid var(--clr-border);">
+                <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+                <div class="feature-content">
+                  <h4>Cloud DevOps Engineer</h4>
+                  <p>Manage high-availability cloud systems.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Sticky Sidebar: Key Facts -->
+        <aside>
+          <div class="key-facts" style="position: sticky; top: calc(var(--navbar-height) + 20px);">
+            <h3><i class="fas fa-circle-info"></i> Key Facts</h3>
+            
+            <div class="key-fact-item">
+              <span class="label">Degree Award:</span>
+              <span class="value">BSc Computer Science</span>
+            </div>
+            <div class="key-fact-item">
+              <span class="label">Programme Code:</span>
+              <span class="value">BCS-01</span>
+            </div>
+            <div class="key-fact-item">
+              <span class="label">Duration:</span>
+              <span class="value">3 Years (6 Semesters)</span>
+            </div>
+            <div class="key-fact-item">
+              <span class="label">Study Modes:</span>
+              <span class="value">Full-Time / Weekend</span>
+            </div>
+            <div class="key-fact-item">
+              <span class="label">Campuses:</span>
+              <span class="value">Main & Jinja Tech Park</span>
+            </div>
+            <div class="key-fact-item">
+              <span class="label">Tuition Fee:</span>
+              <span class="value" style="color: var(--clr-accent); font-size: 16px; font-weight: bold;">$1,200 / Semester</span>
+            </div>
+            <div class="key-fact-item">
+              <span class="label">Upcoming Intake:</span>
+              <span class="value">September 2026</span>
+            </div>
+
+            <div style="margin-top: var(--sp-6); display: flex; flex-direction: column; gap: var(--sp-3);">
+              <a href="portal/apply.html" class="btn btn-primary w-full"><i class="fas fa-paper-plane"></i> Apply for this Programme</a>
+              <button class="btn btn-outline w-full" onclick="alert('Downloading BSc Computer Science Syllabus PDF...');"><i class="fas fa-download"></i> Download Syllabus</button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sticky Bottom Apply Banner -->
+  <div class="sticky-cta visible" style="display: flex;">
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+      <div>
+        <span style="font-size: var(--fs-xs); color: var(--clr-text-muted); text-transform: uppercase;">September 2026 Intake</span>
+        <div class="programme-name" style="font-size: var(--fs-md);">BSc in Computer Science &mdash; $1,200/sem</div>
+      </div>
+      <div style="display: flex; gap: 12px;">
+        <a href="portal/apply.html" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-graduation-cap" style="color: var(--clr-gold);"></i> NileBridge University</div>
+          <p>Delivering high-impact academic education and ethical leadership development across Africa.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Academic Catalog</a>
+            <a href="faculties.html">Faculties</a>
+            <a href="campuses.html">Campuses</a>
+          </div>
+        </div>
+        <div>
+          <h4>Admissions</h4>
+          <div class="footer-links">
+            <a href="admissions.html">Requirements</a>
+            <a href="admissions.html#fees">Fees</a>
+            <a href="portal/apply.html">Apply Online</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-envelope"></i> info@nilebridge.edu</p>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-phone"></i> +256 414 123 456</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NileBridge University. Chartered by NCHE. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="admin/index.html">Admin CMS</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

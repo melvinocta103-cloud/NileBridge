@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions Analytics & Reports — NileBridge Admin</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-layout">
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <div style="width: 38px; height: 38px; background: linear-gradient(135deg, var(--clr-accent), #991B1B); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+          <i class="fas fa-shield-halved"></i>
+        </div>
+        <div>
+          <div style="font-family: var(--ff-heading); font-size: 16px; font-weight: bold; color: white;">NileBridge Admin</div>
+          <div style="font-size: 11px; color: #94A3B8;">Analytics & BI</div>
+        </div>
+      </div>
+
+      <nav class="admin-sidebar-nav">
+        <div class="admin-nav-category">Admissions & Students</div>
+        <a href="index.html" class="admin-nav-link"><i class="fas fa-chart-pie"></i> Executive Overview</a>
+        <a href="applications.html" class="admin-nav-link"><i class="fas fa-id-card-clip"></i> Applications Review <span class="badge-num">5</span></a>
+        <a href="reports.html" class="admin-nav-link active"><i class="fas fa-chart-line"></i> Enrollment Reports</a>
+
+        <div class="admin-nav-category">Academic CMS</div>
+        <a href="programmes.html" class="admin-nav-link"><i class="fas fa-book-bookmark"></i> Programmes CMS</a>
+        <a href="news.html" class="admin-nav-link"><i class="fas fa-newspaper"></i> News & Announcements</a>
+
+        <div class="admin-nav-category">System</div>
+        <a href="../index.html" class="admin-nav-link"><i class="fas fa-globe"></i> View Public Website</a>
+        <a href="../portal/dashboard.html" class="admin-nav-link"><i class="fas fa-user-graduate"></i> View Applicant Portal</a>
+      </nav>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <main class="admin-main">
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <h2 style="font-size: 18px; margin: 0; color: white;">Admissions Analytics & Enrollment Intelligence</h2>
+        <button class="btn btn-sm btn-primary" onclick="alert('Exporting Full Statistical Report (PDF/Excel)...');"><i class="fas fa-file-pdf"></i> Generate PDF Report</button>
+      </header>
+
+      <!-- Content -->
+      <div class="admin-page-content">
+        <div class="grid grid-2" style="margin-bottom: var(--sp-8);">
+          <!-- Faculty Share -->
+          <div class="admin-card" style="padding: var(--sp-6);">
+            <h3 style="font-size: 16px; margin-bottom: var(--sp-4); color: white;"><i class="fas fa-chart-pie"></i> Application Share by Faculty (2026 Intake)</h3>
+            <div style="display: flex; flex-direction: column; gap: var(--sp-3);">
+              <div>
+                <div class="flex-between" style="font-size: 13px; margin-bottom: 4px;">
+                  <span>Science & Technology (Computing/Eng)</span>
+                  <strong style="color: #38BDF8;">38% (475 Apps)</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: #38BDF8; height: 100%; width: 38%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex-between" style="font-size: 13px; margin-bottom: 4px;">
+                  <span>Business & Management (BBA/MBA)</span>
+                  <strong style="color: #34D399;">28% (348 Apps)</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: #34D399; height: 100%; width: 28%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex-between" style="font-size: 13px; margin-bottom: 4px;">
+                  <span>Health Sciences (Nursing/MPH)</span>
+                  <strong style="color: #FBBF24;">18% (224 Apps)</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: #FBBF24; height: 100%; width: 18%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex-between" style="font-size: 13px; margin-bottom: 4px;">
+                  <span>Faculty of Law (LL.B)</span>
+                  <strong style="color: #F87171;">16% (198 Apps)</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: #F87171; height: 100%; width: 16%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Regional Demographics -->
+          <div class="admin-card" style="padding: var(--sp-6);">
+            <h3 style="font-size: 16px; margin-bottom: var(--sp-4); color: white;"><i class="fas fa-earth-africa"></i> Applicant Demographics & Origin</h3>
+            <div style="display: flex; flex-direction: column; gap: var(--sp-3);">
+              <div>
+                <div class="flex-between" style="font-size: 13px; margin-bottom: 4px;">
+                  <span>Domestic Applicants (Uganda)</span>
+                  <strong style="color: white;">64%</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: var(--clr-secondary); height: 100%; width: 64%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex-between" style="font-size: 13px; margin-bottom: 4px;">
+                  <span>East African Regional (Kenya, TZ, Rwanda, DRC)</span>
+                  <strong style="color: white;">26%</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: var(--clr-gold); height: 100%; width: 26%;"></div>
+                </div>
+              </div>
+
+              <div>
+                <div class="flex-between" style="font-size: 13px; margin-bottom: 4px;">
+                  <span>International (West/Southern Africa & Global)</span>
+                  <strong style="color: white;">10%</strong>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); height: 8px; border-radius: 4px; overflow: hidden;">
+                  <div style="background: #EC4899; height: 100%; width: 10%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

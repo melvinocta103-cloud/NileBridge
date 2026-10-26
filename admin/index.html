@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executive Admin Dashboard — NileBridge University</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/admin.css">
+</head>
+<body class="admin-body">
+
+  <div class="admin-layout">
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar">
+      <div class="admin-sidebar-header">
+        <div style="width: 38px; height: 38px; background: linear-gradient(135deg, var(--clr-accent), #991B1B); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white;">
+          <i class="fas fa-shield-halved"></i>
+        </div>
+        <div>
+          <div style="font-family: var(--ff-heading); font-size: 16px; font-weight: bold; color: white;">NileBridge Admin</div>
+          <div style="font-size: 11px; color: #94A3B8;">Institutional Platform v1.0</div>
+        </div>
+      </div>
+
+      <nav class="admin-sidebar-nav">
+        <div class="admin-nav-category">Admissions & Students</div>
+        <a href="index.html" class="admin-nav-link active"><i class="fas fa-chart-pie"></i> Executive Overview</a>
+        <a href="applications.html" class="admin-nav-link"><i class="fas fa-id-card-clip"></i> Applications Review <span class="badge-num">5</span></a>
+        <a href="reports.html" class="admin-nav-link"><i class="fas fa-chart-line"></i> Enrollment Reports</a>
+
+        <div class="admin-nav-category">Academic CMS</div>
+        <a href="programmes.html" class="admin-nav-link"><i class="fas fa-book-bookmark"></i> Programmes CMS</a>
+        <a href="news.html" class="admin-nav-link"><i class="fas fa-newspaper"></i> News & Announcements</a>
+
+        <div class="admin-nav-category">System</div>
+        <a href="../index.html" class="admin-nav-link"><i class="fas fa-globe"></i> View Public Website</a>
+        <a href="../portal/dashboard.html" class="admin-nav-link"><i class="fas fa-user-graduate"></i> View Applicant Portal</a>
+      </nav>
+    </aside>
+
+    <!-- Admin Main Body -->
+    <main class="admin-main">
+      <!-- Topbar -->
+      <header class="admin-topbar">
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <h2 style="font-size: 18px; margin: 0; color: white;">Admissions Operations Command</h2>
+          <span class="status-badge approved">System Live</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <div style="text-align: right;">
+            <div style="font-size: 13px; font-weight: bold; color: white;">Dr. Julian Mbabazi</div>
+            <div style="font-size: 11px; color: #94A3B8;">Academic Registrar</div>
+          </div>
+          <div style="width: 36px; height: 36px; border-radius: 50%; background: var(--clr-secondary); color: white; display: flex; align-items: center; justify-content: center; font-weight: bold;">JM</div>
+        </div>
+      </header>
+
+      <!-- Content -->
+      <div class="admin-page-content">
+        <!-- KPI Cards Grid -->
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Total Applications</span>
+              <div class="kpi-icon-box" style="background: rgba(37, 99, 235, 0.15); color: #38BDF8;"><i class="fas fa-folder-open"></i></div>
+            </div>
+            <div class="kpi-value" id="kpiTotalApps">1,245</div>
+            <div class="kpi-trend positive"><i class="fas fa-arrow-trend-up"></i> +14.2% vs last intake</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Pending & Under Review</span>
+              <div class="kpi-icon-box" style="background: rgba(245, 158, 11, 0.15); color: #FBBF24;"><i class="fas fa-hourglass-half"></i></div>
+            </div>
+            <div class="kpi-value" id="kpiUnderReview">342</div>
+            <div class="kpi-trend neutral"><i class="fas fa-clock"></i> Active committee review</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Approved & Enrolled</span>
+              <div class="kpi-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #34D399;"><i class="fas fa-check-circle"></i></div>
+            </div>
+            <div class="kpi-value" id="kpiApproved">812</div>
+            <div class="kpi-trend positive"><i class="fas fa-arrow-trend-up"></i> 65.2% Acceptance Rate</div>
+          </div>
+
+          <div class="kpi-card">
+            <div class="kpi-header">
+              <span class="kpi-title">Rejected / Incomplete</span>
+              <div class="kpi-icon-box" style="background: rgba(220, 38, 38, 0.15); color: #F87171;"><i class="fas fa-circle-xmark"></i></div>
+            </div>
+            <div class="kpi-value" id="kpiRejected">91</div>
+            <div class="kpi-trend neutral">7.3% Disqualification Rate</div>
+          </div>
+        </div>
+
+        <!-- Recent Submissions Table -->
+        <div class="admin-card">
+          <div class="admin-card-header">
+            <div>
+              <h3 style="font-size: 16px; margin: 0; color: white;"><i class="fas fa-clock-rotate-left"></i> Recent Applicant Submissions</h3>
+              <p style="font-size: 12px; color: #94A3B8; margin: 2px 0 0;">Latest admissions submissions awaiting verification.</p>
+            </div>
+            <a href="applications.html" class="btn btn-sm btn-outline-white">View Full Applications Queue &rarr;</a>
+          </div>
+
+          <div style="overflow-x: auto;">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Application ID</th>
+                  <th>Applicant Name</th>
+                  <th>Degree Programme</th>
+                  <th>Submitted Date</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="adminRecentAppsBody">
+                <!-- Populated by admin.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Quick Links Grid -->
+        <div class="grid grid-3">
+          <div class="card" style="background: #1E293B; border: 1px solid rgba(255,255,255,0.08); padding: var(--sp-6); color: white;">
+            <h4><i class="fas fa-book" style="color: #38BDF8;"></i> Programme Catalogue CMS</h4>
+            <p style="font-size: 13px; color: #94A3B8; margin-bottom: var(--sp-4);">Manage tuition fees, semester durations, entry criteria, and degree descriptions.</p>
+            <a href="programmes.html" class="btn btn-sm btn-outline-white">Manage Programmes &rarr;</a>
+          </div>
+
+          <div class="card" style="background: #1E293B; border: 1px solid rgba(255,255,255,0.08); padding: var(--sp-6); color: white;">
+            <h4><i class="fas fa-bullhorn" style="color: #FBBF24;"></i> News & Events Publisher</h4>
+            <p style="font-size: 13px; color: #94A3B8; margin-bottom: var(--sp-4);">Publish campus news stories, press releases, orientation dates, and academic circulars.</p>
+            <a href="news.html" class="btn btn-sm btn-outline-white">Manage Content &rarr;</a>
+          </div>
+
+          <div class="card" style="background: #1E293B; border: 1px solid rgba(255,255,255,0.08); padding: var(--sp-6); color: white;">
+            <h4><i class="fas fa-file-export" style="color: #34D399;"></i> Admissions Analytics</h4>
+            <p style="font-size: 13px; color: #94A3B8; margin-bottom: var(--sp-4);">Export faculty breakdowns, applicant demographics, and intake projections.</p>
+            <a href="reports.html" class="btn btn-sm btn-outline-white">View Reports &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applicant Dashboard — NileBridge University Admissions</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body class="portal-body">
+
+  <!-- Portal Header -->
+  <header class="portal-header">
+    <div class="container-fluid">
+      <a href="../index.html" class="portal-brand">
+        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span style="font-family: var(--ff-heading); font-size: 18px; font-weight: bold;">NileBridge</span>
+        <span class="badge-tag">Applicant Portal</span>
+      </a>
+
+      <div class="portal-user-menu">
+        <a href="notifications.html" style="color: var(--clr-text-muted); position: relative;" title="Notifications">
+          <i class="fas fa-bell" style="font-size: 18px;"></i>
+          <span style="position: absolute; top: -4px; right: -6px; background: var(--clr-accent); color: white; font-size: 10px; font-weight: bold; width: 16px; height: 16px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">2</span>
+        </a>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div class="user-avatar-badge">SK</div>
+          <div class="hide-mobile">
+            <div class="active-user-name" style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">Samuel Kintu</div>
+            <div style="font-size: var(--fs-xs); color: var(--clr-text-muted);">Prospective Student</div>
+          </div>
+        </div>
+        <a href="login.html" id="portalLogoutBtn" class="btn btn-sm btn-outline-accent" style="margin-left: 8px;"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portal Main Layout -->
+  <div class="portal-wrapper">
+    <!-- Sidebar Navigation -->
+    <aside class="portal-sidebar">
+      <a href="dashboard.html" class="portal-nav-item active"><i class="fas fa-gauge-high"></i> Dashboard</a>
+      <a href="apply.html" class="portal-nav-item"><i class="fas fa-wand-magic-sparkles"></i> New Application</a>
+      <a href="status.html" class="portal-nav-item"><i class="fas fa-timeline"></i> Status & Offer Letter</a>
+      <a href="documents.html" class="portal-nav-item"><i class="fas fa-folder-open"></i> Document Center</a>
+      <a href="notifications.html" class="portal-nav-item"><i class="fas fa-bell"></i> Alerts <span class="badge-count">2</span></a>
+      <div style="margin-top: auto; padding-top: var(--sp-4); border-top: 1px solid var(--clr-border);">
+        <a href="../index.html" class="portal-nav-item"><i class="fas fa-arrow-left"></i> Return to Website</a>
+        <a href="../contact.html" class="portal-nav-item"><i class="fas fa-headset"></i> Support Helpdesk</a>
+      </div>
+    </aside>
+
+    <!-- Main Dashboard Content -->
+    <main class="portal-main" id="applicantDashboardView">
+      <!-- Active Application Hero Card -->
+      <div class="portal-hero-card">
+        <div class="flex-between" style="flex-wrap: wrap; gap: 12px;">
+          <div>
+            <span style="font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: 0.05em; opacity: 0.85;">Active Application</span>
+            <h1 id="dashProgName" style="font-size: var(--fs-2xl); color: var(--clr-white); margin-top: 4px;">BSc in Computer Science</h1>
+            <div style="font-size: var(--fs-sm); opacity: 0.9; margin-top: 4px;">
+              Application ID: <strong id="dashAppId" style="color: var(--clr-gold);">APP-2026-000123</strong> · September 2026 Intake
+            </div>
+          </div>
+          <div>
+            <span id="dashStatusBadge" class="status-badge under_review">UNDER REVIEW</span>
+          </div>
+        </div>
+
+        <div style="margin-top: var(--sp-6);">
+          <div class="flex-between" style="font-size: var(--fs-xs); opacity: 0.9; margin-bottom: 6px;">
+            <span>Admissions Review Progress</span>
+            <span id="dashProgressText">80% Completed</span>
+          </div>
+          <div class="portal-status-progress">
+            <div id="dashProgressBar" class="portal-status-progress-bar" style="width: 80%;"></div>
+          </div>
+        </div>
+
+        <div style="margin-top: var(--sp-6); background: rgba(255,255,255,0.1); padding: var(--sp-4) var(--sp-5); border-radius: var(--radius); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <div style="font-size: var(--fs-sm);">
+            <i class="fas fa-circle-info" style="color: var(--clr-gold); margin-right: 6px;"></i>
+            <span id="dashRemarks">Academic background meets all prerequisites. Final department faculty review in progress.</span>
+          </div>
+          <a href="status.html" class="btn btn-sm btn-outline-white"><i class="fas fa-magnifying-glass"></i> View Live Milestones</a>
+        </div>
+      </div>
+
+      <!-- Quick Action Cards Grid -->
+      <div class="grid grid-3" style="margin-bottom: var(--sp-8);">
+        <!-- Card 1 -->
+        <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border);">
+          <div style="width: 44px; height: 44px; border-radius: 8px; background: #EFF6FF; color: var(--clr-secondary); display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: var(--sp-3);">
+            <i class="fas fa-file-shield"></i>
+          </div>
+          <h3 style="font-size: var(--fs-md); margin-bottom: 6px;">Document Verification</h3>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-4);">3 documents verified by registry. 1 identity document undergoing screening.</p>
+          <a href="documents.html" class="btn btn-sm btn-outline w-full">Manage Documents &rarr;</a>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border);">
+          <div style="width: 44px; height: 44px; border-radius: 8px; background: #ECFDF5; color: #10B981; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: var(--sp-3);">
+            <i class="fas fa-file-lines"></i>
+          </div>
+          <h3 style="font-size: var(--fs-md); margin-bottom: 6px;">Offer Letter & Decision</h3>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-4);">Upon approval, your official digital admission letter will be unlocked for download.</p>
+          <a href="status.html" class="btn btn-sm btn-outline w-full">Check Decision &rarr;</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border);">
+          <div style="width: 44px; height: 44px; border-radius: 8px; background: #FEF3C7; color: #D97706; display: flex; align-items: center; justify-content: center; font-size: 20px; margin-bottom: var(--sp-3);">
+            <i class="fas fa-calendar-check"></i>
+          </div>
+          <h3 style="font-size: var(--fs-md); margin-bottom: 6px;">Key Intake Dates</h3>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-4);"><strong>Matriculation:</strong> Sep 05, 2026<br><strong>Lectures Begin:</strong> Sep 08, 2026</p>
+          <a href="../admissions.html" class="btn btn-sm btn-outline w-full">View Academic Calendar</a>
+        </div>
+      </div>
+
+      <!-- Recent Notifications Box -->
+      <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border);">
+        <div class="flex-between" style="margin-bottom: var(--sp-4);">
+          <h3 style="font-size: var(--fs-lg); margin: 0;"><i class="fas fa-bell"></i> Admissions Notifications</h3>
+          <a href="notifications.html" style="font-size: var(--fs-xs); color: var(--clr-secondary);">View All</a>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: var(--sp-3);">
+          <div style="padding: var(--sp-3) var(--sp-4); background: var(--clr-surface); border-radius: var(--radius); border-left: 3px solid #10B981; font-size: var(--fs-sm);">
+            <strong>Document Verified:</strong> Your High School Academic Certificate has passed registry screening.
+            <div style="font-size: 11px; color: var(--clr-text-light); margin-top: 2px;">Aug 18, 2026 · 10:24 AM</div>
+          </div>
+          <div style="padding: var(--sp-3) var(--sp-4); background: var(--clr-surface); border-radius: var(--radius); border-left: 3px solid #3B82F6; font-size: var(--fs-sm);">
+            <strong>Application Status Update:</strong> Application moved to Faculty Review Stage.
+            <div style="font-size: 11px; color: var(--clr-text-light); margin-top: 2px;">Aug 15, 2026 · 02:15 PM</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/portal.js"></script>
+</body>
+</html>

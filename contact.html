@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — NileBridge University</title>
+  <meta name="description" content="Get in touch with NileBridge University admissions, faculty departments, campus tours, and general inquiries.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+256414123456"><i class="fas fa-phone-alt"></i> +256 414 123 456</a>
+        <a href="mailto:admissions@nilebridge.edu"><i class="fas fa-envelope"></i> admissions@nilebridge.edu</a>
+      </div>
+      <div class="topbar-right">
+        <a href="portal/login.html" style="font-weight: var(--fw-semibold); color: var(--clr-gold);"><i class="fas fa-user-circle"></i> Applicant Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div style="width: 44px; height: 44px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: bold;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NileBridge</span>
+          <span class="brand-tagline">University</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="faculties.html" class="nav-link">Faculties</a></div>
+        <div class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></div>
+        <div class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></div>
+        <div class="nav-item"><a href="news.html" class="nav-link">News & Events</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></div>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="portal/login.html" class="btn btn-outline btn-sm hide-mobile">Log In</a>
+        <a href="portal/apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+        <div class="hamburger" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Contact Directory</span>
+      </div>
+      <h1>Contact NileBridge University</h1>
+      <p>Have questions about admissions, academic programmes, or campus visits? Our team is here to assist you.</p>
+    </div>
+  </section>
+
+  <!-- Contact Details Grid & Form -->
+  <section class="section">
+    <div class="container">
+      <div class="grid grid-3" style="margin-bottom: var(--sp-12);">
+        <div class="contact-card">
+          <div class="icon"><i class="fas fa-map-location-dot"></i></div>
+          <div>
+            <h4>Riverfront Main Campus</h4>
+            <p>Plot 14-20 Ggaba Road, Kampala, Uganda</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon"><i class="fas fa-phone-volume"></i></div>
+          <div>
+            <h4>Call Center</h4>
+            <p>+256 414 123 456<br>+256 800 100 200 (Toll Free)</p>
+          </div>
+        </div>
+
+        <div class="contact-card">
+          <div class="icon"><i class="fas fa-envelope-open-text"></i></div>
+          <div>
+            <h4>Email Inquiries</h4>
+            <p>admissions@nilebridge.edu<br>info@nilebridge.edu</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split: Form & Map Placeholder -->
+      <div class="grid-split">
+        <!-- Interactive Enquiry Form -->
+        <div class="card" style="padding: var(--sp-8); border: 1px solid var(--clr-border);">
+          <h2 style="font-size: var(--fs-2xl); margin-bottom: var(--sp-4);">Send Us an Enquiry</h2>
+          <form id="contactForm" onsubmit="event.preventDefault(); alert('Thank you! Your enquiry has been received. An admissions officer will contact you shortly.'); this.reset();">
+            <div class="form-grid" style="margin-bottom: var(--sp-4);">
+              <div class="form-group">
+                <label class="form-label">Your Full Name <span class="required">*</span></label>
+                <input type="text" class="form-control" placeholder="e.g. Samuel Kintu" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" class="form-control" placeholder="e.g. samuel@example.com" required>
+              </div>
+            </div>
+
+            <div class="form-grid" style="margin-bottom: var(--sp-4);">
+              <div class="form-group">
+                <label class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" placeholder="+256 700 000 000">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject of Interest</label>
+                <select class="form-control">
+                  <option>Undergraduate Admissions</option>
+                  <option>Postgraduate & MBA Inquiries</option>
+                  <option>Scholarships & Financial Aid</option>
+                  <option>International Student Support</option>
+                  <option>Campus Tour Booking</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-bottom: var(--sp-6);">
+              <label class="form-label">Your Message <span class="required">*</span></label>
+              <textarea class="form-control" rows="4" placeholder="How can we help you today?" required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg w-full"><i class="fas fa-paper-plane"></i> Submit Enquiry</button>
+          </form>
+        </div>
+
+        <!-- Campus Map & Visiting Hours -->
+        <div>
+          <div class="card" style="padding: var(--sp-8); border: 1px solid var(--clr-border); margin-bottom: var(--sp-6); background: var(--clr-surface);">
+            <h3 style="margin-bottom: var(--sp-4);"><i class="fas fa-building-columns"></i> Visiting Hours</h3>
+            <p><strong>Monday – Friday:</strong> 8:00 AM – 5:00 PM EAT</p>
+            <p><strong>Saturday:</strong> 9:00 AM – 2:00 PM EAT</p>
+            <p><strong>Sunday & Public Holidays:</strong> Closed (Online Portal 24/7)</p>
+          </div>
+
+          <div class="map-container" style="background: #1E293B; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px;">
+            <div>
+              <i class="fas fa-map-location" style="font-size: 3rem; color: var(--clr-accent); margin-bottom: 12px;"></i>
+              <div style="font-weight: bold; font-size: 1.2rem;">Kampala & Jinja Campuses</div>
+              <div style="font-size: 0.9rem; opacity: 0.8; margin-top: 4px;">Conveniently accessible via public transit and university shuttles.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-graduation-cap" style="color: var(--clr-gold);"></i> NileBridge University</div>
+          <p>Delivering high-impact academic education and ethical leadership development across Africa.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Academic Catalog</a>
+            <a href="faculties.html">Faculties</a>
+            <a href="campuses.html">Campuses</a>
+          </div>
+        </div>
+        <div>
+          <h4>Admissions</h4>
+          <div class="footer-links">
+            <a href="admissions.html">Requirements</a>
+            <a href="admissions.html#fees">Fees</a>
+            <a href="portal/apply.html">Apply Online</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-envelope"></i> info@nilebridge.edu</p>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-phone"></i> +256 414 123 456</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NileBridge University. Chartered by NCHE. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="admin/index.html">Admin CMS</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

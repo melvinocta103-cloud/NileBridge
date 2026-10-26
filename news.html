@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>News & Campus Happenings — NileBridge University</title>
+  <meta name="description" content="Stay updated with the latest news, academic press releases, events, and student achievements at NileBridge University.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+256414123456"><i class="fas fa-phone-alt"></i> +256 414 123 456</a>
+        <a href="mailto:admissions@nilebridge.edu"><i class="fas fa-envelope"></i> admissions@nilebridge.edu</a>
+      </div>
+      <div class="topbar-right">
+        <a href="portal/login.html" style="font-weight: var(--fw-semibold); color: var(--clr-gold);"><i class="fas fa-user-circle"></i> Applicant Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div style="width: 44px; height: 44px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: bold;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NileBridge</span>
+          <span class="brand-tagline">University</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="faculties.html" class="nav-link">Faculties</a></div>
+        <div class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></div>
+        <div class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></div>
+        <div class="nav-item"><a href="news.html" class="nav-link active">News & Events</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="portal/login.html" class="btn btn-outline btn-sm hide-mobile">Log In</a>
+        <a href="portal/apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+        <div class="hamburger" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">News & Events</span>
+      </div>
+      <h1>News, Press & Campus Events</h1>
+      <p>Follow groundbreaking research releases, admissions announcements, campus fairs, and academic milestones.</p>
+    </div>
+  </section>
+
+  <!-- Main News Content -->
+  <section class="section">
+    <div class="container">
+      <!-- Featured Story -->
+      <div class="news-featured" style="margin-bottom: var(--sp-12);">
+        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80" alt="Robotics Hub">
+        <div class="content">
+          <span class="card-badge card-badge-accent" style="margin-bottom: 8px;">Featured News</span>
+          <h2><a href="news-detail.html" style="color: white;">NileBridge Unveils $2.5M State-of-the-Art AI & Robotics Hub</a></h2>
+          <p>Commissioned at the Jinja Tech Park to spearhead research in humanoid computing and seed funding for student ventures.</p>
+          <a href="news-detail.html" class="btn btn-primary btn-sm" style="margin-top: 12px;">Read Full Story &rarr;</a>
+        </div>
+      </div>
+
+      <!-- News Grid -->
+      <div class="grid grid-3">
+        <!-- News Card 1 -->
+        <div class="card news-card">
+          <div class="card-img-wrapper" style="position: relative;">
+            <img class="card-img" src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Admissions Open">
+            <div class="card-date"><span class="day">02</span><span class="month">AUG</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge card-badge-primary">Admissions</span>
+            <h3 class="card-title"><a href="news-detail.html">September 2026 Admissions Open: Guidelines & Scholarships</a></h3>
+            <p class="card-text">Prospective undergraduate and postgraduate candidates are invited to apply before the deadline.</p>
+            <a href="news-detail.html" class="card-link">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <!-- News Card 2 -->
+        <div class="card news-card">
+          <div class="card-img-wrapper" style="position: relative;">
+            <img class="card-img" src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=600&q=80" alt="Law Victory">
+            <div class="card-date"><span class="day">28</span><span class="month">JUL</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge card-badge-accent">Academic Excellence</span>
+            <h3 class="card-title"><a href="news-detail.html">Faculty of Law Wins All-Africa Moot Court Championship</a></h3>
+            <p class="card-text">NileBridge student advocates defeated 32 participating universities in Arusha, Tanzania.</p>
+            <a href="news-detail.html" class="card-link">Read More &rarr;</a>
+          </div>
+        </div>
+
+        <!-- News Card 3 -->
+        <div class="card news-card">
+          <div class="card-img-wrapper" style="position: relative;">
+            <img class="card-img" src="https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=600&q=80" alt="Career Expo">
+            <div class="card-date"><span class="day">15</span><span class="month">JUL</span></div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge card-badge-primary">Campus Life</span>
+            <h3 class="card-title"><a href="news-detail.html">Annual Career Expo 2026 Connects 1,200 Graduates with Top Employers</a></h3>
+            <p class="card-text">Over 80 regional and multinational corporate partners conducted on-campus interviews.</p>
+            <a href="news-detail.html" class="card-link">Read More &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-graduation-cap" style="color: var(--clr-gold);"></i> NileBridge University</div>
+          <p>Delivering high-impact academic education and ethical leadership development across Africa.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Academic Catalog</a>
+            <a href="faculties.html">Faculties</a>
+            <a href="campuses.html">Campuses</a>
+          </div>
+        </div>
+        <div>
+          <h4>Admissions</h4>
+          <div class="footer-links">
+            <a href="admissions.html">Requirements</a>
+            <a href="admissions.html#fees">Fees</a>
+            <a href="portal/apply.html">Apply Online</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-envelope"></i> info@nilebridge.edu</p>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-phone"></i> +256 414 123 456</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NileBridge University. Chartered by NCHE. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="admin/index.html">Admin CMS</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

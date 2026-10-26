@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notifications & Alerts — NileBridge Portal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body class="portal-body">
+
+  <!-- Portal Header -->
+  <header class="portal-header">
+    <div class="container-fluid">
+      <a href="../index.html" class="portal-brand">
+        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span style="font-family: var(--ff-heading); font-size: 18px; font-weight: bold;">NileBridge</span>
+        <span class="badge-tag">Notification Hub</span>
+      </a>
+
+      <div class="portal-user-menu">
+        <div class="user-avatar-badge">SK</div>
+        <div class="hide-mobile">
+          <div class="active-user-name" style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">Samuel Kintu</div>
+        </div>
+        <a href="dashboard.html" class="btn btn-sm btn-outline" style="margin-left: 8px;"><i class="fas fa-arrow-left"></i> Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portal Layout -->
+  <div class="portal-wrapper">
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <a href="dashboard.html" class="portal-nav-item"><i class="fas fa-gauge-high"></i> Dashboard</a>
+      <a href="apply.html" class="portal-nav-item"><i class="fas fa-wand-magic-sparkles"></i> New Application</a>
+      <a href="status.html" class="portal-nav-item"><i class="fas fa-timeline"></i> Status & Offer Letter</a>
+      <a href="documents.html" class="portal-nav-item"><i class="fas fa-folder-open"></i> Document Center</a>
+      <a href="notifications.html" class="portal-nav-item active"><i class="fas fa-bell"></i> Alerts <span class="badge-count">2</span></a>
+      <div style="margin-top: auto; padding-top: var(--sp-4); border-top: 1px solid var(--clr-border);">
+        <a href="../index.html" class="portal-nav-item"><i class="fas fa-arrow-left"></i> Return to Website</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="portal-main">
+      <div class="flex-between" style="margin-bottom: var(--sp-6);">
+        <h1 style="font-size: var(--fs-2xl); color: var(--clr-primary); margin: 0;">Admissions Alerts & Messages</h1>
+        <button class="btn btn-sm btn-outline" onclick="alert('All notifications marked as read.');">Mark All as Read</button>
+      </div>
+
+      <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border); display: flex; flex-direction: column; gap: var(--sp-4);">
+        <!-- Alert 1 -->
+        <div style="padding: var(--sp-4); background: var(--clr-surface); border-radius: var(--radius); border-left: 4px solid #10B981;">
+          <div class="flex-between">
+            <h4 style="font-size: var(--fs-base); color: var(--clr-primary); margin-bottom: 2px;"><i class="fas fa-certificate" style="color: #10B981;"></i> Document Verification Succeeded</h4>
+            <span style="font-size: 11px; color: var(--clr-text-light);">Aug 18, 2026</span>
+          </div>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: 0;">Your High School Academic Certificate has passed registry screening and meets prerequisite criteria for BSc in Computer Science.</p>
+        </div>
+
+        <!-- Alert 2 -->
+        <div style="padding: var(--sp-4); background: var(--clr-surface); border-radius: var(--radius); border-left: 4px solid #3B82F6;">
+          <div class="flex-between">
+            <h4 style="font-size: var(--fs-base); color: var(--clr-primary); margin-bottom: 2px;"><i class="fas fa-users" style="color: #3B82F6;"></i> Application Advanced to Faculty Committee</h4>
+            <span style="font-size: 11px; color: var(--clr-text-light);">Aug 15, 2026</span>
+          </div>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: 0;">Application APP-2026-000123 has been passed to the Faculty of Science & Technology Admissions Committee for departmental evaluation.</p>
+        </div>
+
+        <!-- Alert 3 -->
+        <div style="padding: var(--sp-4); background: var(--clr-surface); border-radius: var(--radius); border-left: 4px solid var(--clr-gold);">
+          <div class="flex-between">
+            <h4 style="font-size: var(--fs-base); color: var(--clr-primary); margin-bottom: 2px;"><i class="fas fa-calendar" style="color: var(--clr-gold);"></i> Orientation Week Reminder</h4>
+            <span style="font-size: 11px; color: var(--clr-text-light);">Aug 12, 2026</span>
+          </div>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: 0;">Freshers' orientation week for September 2026 intake will commence on September 05, 2026 at the Riverfront Main Campus.</p>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/portal.js"></script>
+</body>
+</html>

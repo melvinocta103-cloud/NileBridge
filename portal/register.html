@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Applicant Account — NileBridge Admissions Portal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body style="background: #F1F5F9; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;">
+
+  <div style="width: 100%; max-width: 520px;">
+    <!-- Logo Header -->
+    <div style="text-align: center; margin-bottom: var(--sp-6);">
+      <a href="../index.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--clr-primary);">
+        <div style="width: 42px; height: 42px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span style="font-family: var(--ff-heading); font-size: 22px; font-weight: bold;">NileBridge University</span>
+      </a>
+      <p style="color: var(--clr-text-muted); font-size: var(--fs-sm); margin-top: 4px;">New Applicant Registration</p>
+    </div>
+
+    <!-- Registration Card -->
+    <div class="card" style="padding: var(--sp-8); border: 1px solid var(--clr-border); box-shadow: var(--shadow-xl);">
+      <h2 style="font-size: var(--fs-2xl); color: var(--clr-primary); margin-bottom: var(--sp-2);">Create Applicant Account</h2>
+      <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">Register once to submit applications, upload documents, and receive official decisions.</p>
+
+      <form id="applicantRegisterForm" onsubmit="event.preventDefault(); alert('Account registered successfully! Redirecting to application wizard...'); window.location.href='apply.html';">
+        <div class="form-grid" style="margin-bottom: var(--sp-4);">
+          <div class="form-group">
+            <label class="form-label">First Name <span class="required">*</span></label>
+            <input type="text" class="form-control" placeholder="e.g. Samuel" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name <span class="required">*</span></label>
+            <input type="text" class="form-control" placeholder="e.g. Kintu" required>
+          </div>
+        </div>
+
+        <div class="form-group" style="margin-bottom: var(--sp-4);">
+          <label class="form-label">Email Address <span class="required">*</span></label>
+          <input type="email" class="form-control" placeholder="your.email@example.com" required>
+          <span class="form-help">Your official admission decision will be sent to this email.</span>
+        </div>
+
+        <div class="form-group" style="margin-bottom: var(--sp-4);">
+          <label class="form-label">Phone / WhatsApp Number <span class="required">*</span></label>
+          <input type="tel" class="form-control" placeholder="+256 700 000 000" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: var(--sp-6);">
+          <label class="form-label">Create Password <span class="required">*</span></label>
+          <input type="password" class="form-control" placeholder="Minimum 8 characters" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-full"><i class="fas fa-user-plus"></i> Create Account & Start Application</button>
+      </form>
+
+      <div style="text-align: center; margin-top: var(--sp-6); font-size: var(--fs-sm); color: var(--clr-text-muted);">
+        Already registered? <a href="login.html" style="font-weight: bold; color: var(--clr-accent);">Sign In Here &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/portal.js"></script>
+</body>
+</html>

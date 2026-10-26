@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NileBridge University — Empowering Leaders, Transforming Africa</title>
+  <meta name="description" content="Discover world-class higher education at NileBridge University. Explore 45+ accredited undergraduate and postgraduate programmes, online admissions, and modern campuses.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Core Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       1. TOP BAR
+       ═══════════════════════════════════════════ -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+256414123456"><i class="fas fa-phone-alt"></i> +256 414 123 456</a>
+        <a href="mailto:admissions@nilebridge.edu"><i class="fas fa-envelope"></i> admissions@nilebridge.edu</a>
+        <span class="hide-mobile" style="color: rgba(255,255,255,0.6);"><i class="fas fa-clock"></i> Mon - Fri: 8:00 AM - 5:00 PM</span>
+      </div>
+      <div class="topbar-right">
+        <div class="topbar-social">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.2);"></div>
+        <a href="portal/login.html" style="font-weight: var(--fw-semibold); color: var(--clr-gold);"><i class="fas fa-user-circle"></i> Applicant Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       2. MAIN NAVBAR
+       ═══════════════════════════════════════════ -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div style="width: 44px; height: 44px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: bold;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NileBridge</span>
+          <span class="brand-tagline">University</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link active">Home</a></div>
+        <div class="nav-item has-dropdown">
+          <a href="about.html" class="nav-link">About <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="nav-dropdown">
+            <a href="about.html">About NileBridge</a>
+            <a href="about.html#leadership">Leadership & Governance</a>
+            <a href="about.html#history">History & Heritage</a>
+            <a href="campuses.html">Campuses & Facilities</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="faculties.html" class="nav-link">Faculties</a></div>
+        <div class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></div>
+        <div class="nav-item has-dropdown">
+          <a href="admissions.html" class="nav-link">Admissions <i class="fas fa-chevron-down chevron"></i></a>
+          <div class="nav-dropdown">
+            <a href="admissions.html">How to Apply</a>
+            <a href="admissions.html#requirements">Entry Requirements</a>
+            <a href="admissions.html#fees">Tuition & Fees</a>
+            <a href="admissions.html#scholarships">Scholarships</a>
+            <a href="portal/apply.html">Start Online Application</a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="news.html" class="nav-link">News & Events</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="portal/login.html" class="btn btn-outline btn-sm hide-mobile"><i class="fas fa-sign-in-alt"></i> Log In</a>
+        <a href="portal/apply.html" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i> Apply Now</a>
+        <div class="hamburger" id="navToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <!-- ═══════════════════════════════════════════
+       3. HERO SLIDER (Inspiration Template)
+       ═══════════════════════════════════════════ -->
+  <section class="hero">
+    <div class="hero-slider">
+      <!-- Slide 1 -->
+      <div class="hero-slide active">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1920&q=80" alt="NileBridge University Campus Students">
+        <div class="hero-overlay"></div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="hero-slide">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&w=1920&q=80" alt="Graduation and Excellence at NileBridge">
+        <div class="hero-overlay"></div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <span class="hero-badge"><i class="fas fa-star" style="color: var(--clr-gold); margin-right: 4px;"></i> Great Quality Campus Life</span>
+        <h1>Discover the world of possible university.</h1>
+        <p class="text-lead">Empowering ambitious leaders, software innovators, and healthcare pioneers through chartered academic excellence across Africa.</p>
+        <div class="hero-actions">
+          <a href="portal/apply.html" class="btn btn-primary btn-lg"><i class="fas fa-user-plus"></i> Apply for 2026 Intake</a>
+          <a href="#" class="hero-video-trigger" data-video-modal data-video-url="https://www.youtube-nocookie.com/embed/ScMzIvxBSi4?autoplay=1">
+            <div class="play-btn-circle">
+              <i class="fas fa-play" style="margin-left: 3px;"></i>
+            </div>
+            <div>
+              <div style="font-weight: var(--fw-bold); font-size: var(--fs-base);">Watch Video</div>
+              <div style="font-size: var(--fs-xs); opacity: 0.8;">Campus Tour & Intro</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Slider Navigation Controls -->
+    <button class="hero-nav hero-nav-prev" aria-label="Previous Slide"><i class="fas fa-chevron-left"></i></button>
+    <button class="hero-nav hero-nav-next" aria-label="Next Slide"><i class="fas fa-chevron-right"></i></button>
+    <div class="hero-dots">
+      <div class="hero-dot active"></div>
+      <div class="hero-dot"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       4. PROGRAMME QUICK FINDER
+       ═══════════════════════════════════════════ -->
+  <section class="search-bar-section">
+    <div class="container">
+      <form class="search-bar" id="programmeFinderForm">
+        <div class="search-field">
+          <label><i class="fas fa-search"></i> Search Degree / Keyword</label>
+          <input type="text" name="keyword" placeholder="e.g. Computer Science, Nursing, Law, MBA...">
+        </div>
+        <div class="divider-v"></div>
+        <div class="search-field">
+          <label><i class="fas fa-university"></i> Academic Faculty</label>
+          <select name="faculty">
+            <option value="">All Faculties & Schools</option>
+            <option value="fac-sci-tech">Science & Technology</option>
+            <option value="fac-biz-mgmt">Business & Management</option>
+            <option value="fac-health-sci">Health Sciences</option>
+            <option value="fac-law">Faculty of Law</option>
+            <option value="fac-humanities">Humanities & Social Sciences</option>
+          </select>
+        </div>
+        <div class="divider-v"></div>
+        <div class="search-field">
+          <label><i class="fas fa-layer-group"></i> Degree Level</label>
+          <select name="level">
+            <option value="">All Study Levels</option>
+            <option value="Undergraduate">Undergraduate (Bachelor's)</option>
+            <option value="Postgraduate">Postgraduate (Master's / MBA)</option>
+            <option value="Diploma">Diploma Programmes</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg"><i class="fas fa-filter"></i> Find Courses</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       5. ACADEMICS SECTION (Inspiration Template)
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header-doodle">
+        <h2 class="section-title">Academics</h2>
+        <!-- Decorative SVG doodle swirl matching template -->
+        <svg class="doodle-swirl" viewBox="0 0 140 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12C35 2 70 20 100 8C115 2 125 15 135 10" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p class="section-subtitle mx-auto" style="max-width: 600px; color: var(--clr-text-muted);">Explore industry-calibrated academic divisions tailored to equip you with real-world competencies.</p>
+      </div>
+
+      <div class="academics-grid">
+        <!-- Card 1 -->
+        <div class="academic-card">
+          <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=600&q=80" alt="Science & Technology">
+          <div class="academic-card-overlay">
+            <h3 class="academic-card-title">Let's Talk Science & Tech</h3>
+            <a href="programmes.html?faculty=fac-sci-tech" class="academic-card-link">Explore Degrees <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="academic-card">
+          <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=600&q=80" alt="Business Administration">
+          <div class="academic-card-overlay">
+            <h3 class="academic-card-title">Innovative Business Leadership</h3>
+            <a href="programmes.html?faculty=fac-biz-mgmt" class="academic-card-link">Explore Degrees <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="academic-card">
+          <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Cloud & Computing">
+          <div class="academic-card-overlay">
+            <h3 class="academic-card-title">AI & Software Engineering</h3>
+            <a href="programme-detail.html" class="academic-card-link">Explore Degrees <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="academic-card">
+          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Health & Nursing">
+          <div class="academic-card-overlay">
+            <h3 class="academic-card-title">Clinical Healthcare & Nursing</h3>
+            <a href="programmes.html?faculty=fac-health-sci" class="academic-card-link">Explore Degrees <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       6. WELCOME SECTION (Inspiration Template)
+       ═══════════════════════════════════════════ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="grid-split">
+        <!-- Left Column: Overlapping Photos -->
+        <div class="welcome-image-group">
+          <img class="img-main" src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=700&q=80" alt="NileBridge University Building">
+          <img class="img-accent" src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Students in Discussion">
+          <div class="experience-badge">
+            <span class="number">28+</span>
+            <span class="label">Years of<br>Excellence</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Welcome Content -->
+        <div>
+          <span class="badge" style="background-color: rgba(var(--clr-accent-rgb), 0.1); color: var(--clr-accent); margin-bottom: var(--sp-3);"><i class="fas fa-award"></i> Fully Chartered & Accredited</span>
+          <h2 style="font-size: var(--fs-3xl); margin-bottom: var(--sp-4);">Welcome to <span style="color: var(--clr-accent);">NileBridge University</span> Platform</h2>
+          <p style="color: var(--clr-text-muted); font-size: var(--fs-md); line-height: var(--lh-relaxed); margin-bottom: var(--sp-4);">
+            Education is both the transformative transmission of high-impact knowledge and the nurturing of visionary character. At NileBridge, we bridge cutting-edge digital learning with practical enterprise readiness.
+          </p>
+          <div style="background-color: var(--clr-white); border-left: 4px solid var(--clr-secondary); padding: var(--sp-4) var(--sp-5); border-radius: var(--radius); margin-bottom: var(--sp-6);">
+            <p style="font-size: var(--fs-sm); margin-bottom: 0; color: var(--clr-primary);">
+              <strong>Have questions about admissions?</strong> <a href="admissions.html" style="color: var(--clr-accent); font-weight: var(--fw-bold);">Get Free 2026 Admissions Guide &rarr;</a>
+            </p>
+          </div>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">
+            With three modern campuses, state-of-the-art simulation laboratories, and partnerships spanning global technology corporations, our graduates enter the workforce positioned for accelerated leadership.
+          </p>
+
+          <div style="display: flex; align-items: center; gap: var(--sp-6); flex-wrap: wrap;">
+            <a href="about.html" class="btn btn-primary">Read More <i class="fas fa-arrow-right icon-arrow"></i></a>
+            <div class="support-widget">
+              <div class="support-icon-circle"><i class="fas fa-headset"></i></div>
+              <div>
+                <div style="font-size: var(--fs-xs); color: var(--clr-text-light); text-transform: uppercase;">Admissions Support</div>
+                <a href="mailto:admissions@nilebridge.edu" style="font-weight: var(--fw-bold); font-size: var(--fs-sm); color: var(--clr-primary);">admissions@nilebridge.edu</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       7. CAMPUS LIFE SECTION (Inspiration Template)
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header-doodle">
+        <h2 class="section-title">Campus Life</h2>
+        <svg class="doodle-swirl" viewBox="0 0 140 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12C35 2 70 20 100 8C115 2 125 15 135 10" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p class="section-subtitle mx-auto" style="max-width: 600px; color: var(--clr-text-muted);">A vibrant, inclusive community where academic curiosity flourishes alongside sports, innovation, and culture.</p>
+      </div>
+
+      <div class="grid-split">
+        <!-- Feature List on Left -->
+        <div>
+          <!-- Item 1 -->
+          <div class="campus-life-feature">
+            <div class="clf-left">
+              <div class="clf-icon green"><i class="fas fa-laptop-code"></i></div>
+              <div class="clf-text">
+                <h4>Smart Learning Labs & Innovation</h4>
+                <p>24/7 high-speed fiber-connected computing clusters and AI research testbeds.</p>
+              </div>
+            </div>
+            <a href="campuses.html" class="clf-arrow-btn"><i class="fas fa-chevron-right"></i></a>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="campus-life-feature">
+            <div class="clf-left">
+              <div class="clf-icon blue"><i class="fas fa-chart-pie"></i></div>
+              <div class="clf-text">
+                <h4>Executive Business & Moot Courts</h4>
+                <p>Digital trial advocacy chambers and simulated financial trading floors.</p>
+              </div>
+            </div>
+            <a href="campuses.html" class="clf-arrow-btn"><i class="fas fa-chevron-right"></i></a>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="campus-life-feature">
+            <div class="clf-left">
+              <div class="clf-icon gold"><i class="fas fa-users-gear"></i></div>
+              <div class="clf-text">
+                <h4>Career Placement & Global Internships</h4>
+                <p>Dedicated career center connecting 1,200+ graduates annually with top multinationals.</p>
+              </div>
+            </div>
+            <a href="campuses.html" class="clf-arrow-btn"><i class="fas fa-chevron-right"></i></a>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="campus-life-feature">
+            <div class="clf-left">
+              <div class="clf-icon purple"><i class="fas fa-futbol"></i></div>
+              <div class="clf-text">
+                <h4>Sports Complex & Student Residences</h4>
+                <p>Olympic-standard athletic tracks, swimming facilities, and secure lakeside hostels.</p>
+              </div>
+            </div>
+            <a href="campuses.html" class="clf-arrow-btn"><i class="fas fa-chevron-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Right Side Campus Photo -->
+        <div style="position: relative;">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=700&q=80" alt="Students on Campus" style="border-radius: var(--radius-xl); box-shadow: var(--shadow-xl); width: 100%; height: 480px; object-fit: cover;">
+          <div style="position: absolute; bottom: 20px; right: 20px; background: rgba(10, 22, 40, 0.9); color: white; padding: 14px 20px; border-radius: var(--radius-lg); backdrop-filter: blur(8px); display: flex; align-items: center; gap: 12px;">
+            <i class="fas fa-shield-halved" style="color: var(--clr-accent); font-size: 24px;"></i>
+            <div>
+              <div style="font-weight: bold; font-size: 14px;">Safe & Secure Campus</div>
+              <div style="font-size: 11px; opacity: 0.8;">24/7 Security & Support</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       8. FEATURED PROGRAMMES SECTION
+       ═══════════════════════════════════════════ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="flex-between" style="margin-bottom: var(--sp-10); flex-wrap: wrap; gap: var(--sp-4);">
+        <div>
+          <span class="badge" style="background-color: rgba(var(--clr-accent-rgb), 0.1); color: var(--clr-accent);"><i class="fas fa-book-open"></i> Academic Catalogue</span>
+          <h2 style="font-size: var(--fs-3xl); margin-top: var(--sp-2);">Featured Degree Programmes</h2>
+        </div>
+        <a href="programmes.html" class="btn btn-outline"><i class="fas fa-th-list"></i> View All 45+ Programmes</a>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Programme 1 -->
+        <div class="card programme-card">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=600&q=80" alt="Computer Science">
+            <span class="card-badge card-badge-accent" style="position: absolute; top: 12px; right: 12px;">Most Popular</span>
+          </div>
+          <div class="card-body">
+            <span class="card-badge card-badge-primary" style="align-self: flex-start;">Undergraduate</span>
+            <h3 class="card-title"><a href="programme-detail.html">BSc in Computer Science</a></h3>
+            <p class="card-text">Master cloud architecture, algorithms, AI engineering, and full-stack software development.</p>
+            <div class="card-details">
+              <span class="detail-tag"><i class="fas fa-clock"></i> 3 Years</span>
+              <span class="detail-tag"><i class="fas fa-tag"></i> $1,200/sem</span>
+              <span class="detail-tag"><i class="fas fa-building"></i> Main & Tech Park</span>
+            </div>
+            <div class="card-actions">
+              <a href="programme-detail.html" class="btn btn-sm btn-outline" style="flex: 1;">Details</a>
+              <a href="portal/apply.html" class="btn btn-sm btn-primary" style="flex: 1;">Apply Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programme 2 -->
+        <div class="card programme-card">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600&q=80" alt="Business Administration">
+            <span class="card-badge card-badge-primary" style="position: absolute; top: 12px; right: 12px;">High Demand</span>
+          </div>
+          <div class="card-body">
+            <span class="card-badge card-badge-primary" style="align-self: flex-start;">Undergraduate</span>
+            <h3 class="card-title"><a href="programmes.html">Bachelor of Business Administration (BBA)</a></h3>
+            <p class="card-text">Gain strategic acumen, financial modeling, marketing innovation, and entrepreneurial leadership.</p>
+            <div class="card-details">
+              <span class="detail-tag"><i class="fas fa-clock"></i> 3 Years</span>
+              <span class="detail-tag"><i class="fas fa-tag"></i> $950/sem</span>
+              <span class="detail-tag"><i class="fas fa-building"></i> City & Main</span>
+            </div>
+            <div class="card-actions">
+              <a href="programmes.html" class="btn btn-sm btn-outline" style="flex: 1;">Details</a>
+              <a href="portal/apply.html" class="btn btn-sm btn-primary" style="flex: 1;">Apply Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Programme 3 -->
+        <div class="card programme-card">
+          <div class="card-img-wrapper">
+            <img class="card-img" src="https://images.unsplash.com/photo-1453733197781-70d2d2b30742?auto=format&fit=crop&w=600&q=80" alt="Law School">
+            <span class="card-badge card-badge-accent" style="position: absolute; top: 12px; right: 12px;">Accredited</span>
+          </div>
+          <div class="card-body">
+            <span class="card-badge card-badge-primary" style="align-self: flex-start;">Undergraduate</span>
+            <h3 class="card-title"><a href="programmes.html">Bachelor of Laws (LL.B)</a></h3>
+            <p class="card-text">Comprehensive legal jurisprudence, trial advocacy, human rights law, and international arbitration.</p>
+            <div class="card-details">
+              <span class="detail-tag"><i class="fas fa-clock"></i> 4 Years</span>
+              <span class="detail-tag"><i class="fas fa-tag"></i> $1,400/sem</span>
+              <span class="detail-tag"><i class="fas fa-building"></i> City Campus</span>
+            </div>
+            <div class="card-actions">
+              <a href="programmes.html" class="btn btn-sm btn-outline" style="flex: 1;">Details</a>
+              <a href="portal/apply.html" class="btn btn-sm btn-primary" style="flex: 1;">Apply Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       9. STATS COUNTER BAR
+       ═══════════════════════════════════════════ -->
+  <section class="section section-dark" style="background: linear-gradient(135deg, var(--clr-primary) 0%, #172554 100%);">
+    <div class="container">
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-user-graduate"></i></div>
+          <div class="stat-number">15,000+</div>
+          <div class="stat-label">Alumni Worldwide</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="stat-number">98.4%</div>
+          <div class="stat-label">Graduate Employment Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-certificate"></i></div>
+          <div class="stat-number">45+</div>
+          <div class="stat-label">Accredited Programmes</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-icon"><i class="fas fa-landmark"></i></div>
+          <div class="stat-number">3</div>
+          <div class="stat-label">Ultra-Modern Campuses</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       10. ADMISSIONS ROADMAP
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header-doodle">
+        <h2 class="section-title">How to Apply</h2>
+        <svg class="doodle-swirl" viewBox="0 0 140 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12C35 2 70 20 100 8C115 2 125 15 135 10" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <p class="section-subtitle mx-auto" style="max-width: 600px; color: var(--clr-text-muted);">Simple 4-step digital application journey to secure your enrollment for the upcoming academic intake.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <h4>Select Programme</h4>
+          <p class="text-muted">Browse our catalogue and choose your preferred degree and study mode.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <h4>Complete Wizard</h4>
+          <p class="text-muted">Fill in your personal and academic background on the online portal.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <h4>Upload Documents</h4>
+          <p class="text-muted">Attach digital copies of your certificates, transcripts, and passport photo.</p>
+        </div>
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <h4>Track & Enroll</h4>
+          <p class="text-muted">Monitor live review milestones, receive your admission letter, and join!</p>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--sp-12);">
+        <a href="portal/apply.html" class="btn btn-primary btn-lg"><i class="fas fa-rocket"></i> Launch Application Wizard</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       11. LATEST NEWS & EVENTS
+       ═══════════════════════════════════════════ -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="flex-between" style="margin-bottom: var(--sp-10); flex-wrap: wrap; gap: var(--sp-4);">
+        <div>
+          <span class="badge" style="background-color: rgba(var(--clr-accent-rgb), 0.1); color: var(--clr-accent);"><i class="fas fa-bullhorn"></i> Campus Happenings</span>
+          <h2 style="font-size: var(--fs-3xl); margin-top: var(--sp-2);">News & Upcoming Events</h2>
+        </div>
+        <a href="news.html" class="btn btn-outline">View All Updates &rarr;</a>
+      </div>
+
+      <div class="grid-split">
+        <!-- Left: Featured News Article -->
+        <div class="card news-card">
+          <div class="card-img-wrapper" style="position: relative;">
+            <img class="card-img" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=700&q=80" alt="Robotics Hub">
+            <div class="card-date">
+              <span class="day">14</span>
+              <span class="month">AUG</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <span class="card-badge card-badge-primary">Innovation & Tech</span>
+            <h3 class="card-title"><a href="news-detail.html">NileBridge Unveils $2.5M State-of-the-Art AI & Robotics Hub</a></h3>
+            <p class="card-text">Commissioned at Jinja Tech Park to spearhead cutting-edge machine learning research and student startup incubation.</p>
+            <a href="news-detail.html" class="card-link">Read Full Story &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Right: Upcoming Events List -->
+        <div style="display: flex; flex-direction: column; gap: var(--sp-4);">
+          <div class="event-item" style="background: var(--clr-white);">
+            <div class="event-date-box">
+              <span class="day">28</span>
+              <span class="month">AUG</span>
+            </div>
+            <div class="event-info">
+              <h4><a href="news.html" style="color: var(--clr-primary);">Admissions Open Day & Campus Virtual Tour</a></h4>
+              <p>Meet faculty deans, explore labs, and receive on-the-spot scholarship guidance.</p>
+              <span class="event-location"><i class="fas fa-map-marker-alt"></i> Main Campus & Zoom Live</span>
+            </div>
+          </div>
+
+          <div class="event-item" style="background: var(--clr-white);">
+            <div class="event-date-box">
+              <span class="day">05</span>
+              <span class="month">SEP</span>
+            </div>
+            <div class="event-info">
+              <h4><a href="news.html" style="color: var(--clr-primary);">Freshers' Orientation & Matriculation Week</a></h4>
+              <p>Official welcome ceremonies, student clubs expo, and digital portal onboarding.</p>
+              <span class="event-location"><i class="fas fa-map-marker-alt"></i> Riverfront Quadrangle</span>
+            </div>
+          </div>
+
+          <div class="event-item" style="background: var(--clr-white);">
+            <div class="event-date-box">
+              <span class="day">18</span>
+              <span class="month">SEP</span>
+            </div>
+            <div class="event-info">
+              <h4><a href="news.html" style="color: var(--clr-primary);">International Symposium on Green Energy & AI</a></h4>
+              <p>Keynotes from global research pioneers on African renewable tech solutions.</p>
+              <span class="event-location"><i class="fas fa-map-marker-alt"></i> Jinja Innovation Park</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       12. TESTIMONIALS
+       ═══════════════════════════════════════════ -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header-doodle">
+        <h2 class="section-title">Student & Alumni Voices</h2>
+        <svg class="doodle-swirl" viewBox="0 0 140 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12C35 2 70 20 100 8C115 2 125 15 135 10" stroke="#10B981" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+
+      <div class="testimonial-carousel">
+        <div class="testimonial-slide active">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Ronald Ssemwogerere">
+          <p class="testimonial-quote">"NileBridge didn't just teach me coding; it gave me the architectural vision and leadership mindset to build resilient systems at enterprise scale."</p>
+          <div class="testimonial-name">Eng. Ronald Ssemwogerere</div>
+          <div class="testimonial-role">Lead Software Architect at Safaricom (BSc CS Alum '22)</div>
+        </div>
+
+        <div class="testimonial-slide">
+          <img class="testimonial-avatar" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80" alt="Brenda Akello">
+          <p class="testimonial-quote">"The moot court championships and demanding faculty prepared me to step into high-stakes corporate litigation with absolute confidence."</p>
+          <div class="testimonial-name">Counsel Brenda Akello</div>
+          <div class="testimonial-role">Senior Corporate Attorney & Partner (LL.B Alum '20)</div>
+        </div>
+
+        <div class="testimonial-dots">
+          <div class="testimonial-dot active"></div>
+          <div class="testimonial-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       13. ACCREDITATIONS & PARTNERS
+       ═══════════════════════════════════════════ -->
+  <section class="section-sm section-alt">
+    <div class="container">
+      <p style="text-align: center; font-size: var(--fs-xs); text-transform: uppercase; letter-spacing: var(--ls-wide); color: var(--clr-text-light); margin-bottom: var(--sp-6);">Chartered & Recognized By Global Academic Consortia</p>
+      <div class="partners-grid">
+        <div style="font-weight: 700; font-size: 18px; color: var(--clr-primary);"><i class="fas fa-shield-alt" style="color: var(--clr-gold);"></i> NCHE UGANDA</div>
+        <div style="font-weight: 700; font-size: 18px; color: var(--clr-primary);"><i class="fas fa-globe-africa" style="color: var(--clr-secondary);"></i> IUCEA CHARTERED</div>
+        <div style="font-weight: 700; font-size: 18px; color: var(--clr-primary);"><i class="fas fa-award" style="color: var(--clr-accent);"></i> IAU MEMBER</div>
+        <div style="font-weight: 700; font-size: 18px; color: var(--clr-primary);"><i class="fas fa-microchip" style="color: #10B981;"></i> IEEE STUDENT CHAPTER</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       14. CTA BANNER
+       ═══════════════════════════════════════════ -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Ready to Start Your Transformative Journey?</h2>
+      <p>Applications for the prestigious September 2026 Academic Intake are now open across all 5 faculties. Secure your place today.</p>
+      <div style="display: flex; justify-content: center; gap: var(--sp-4); flex-wrap: wrap;">
+        <a href="portal/apply.html" class="btn btn-outline-white btn-lg"><i class="fas fa-paper-plane"></i> Apply Online Today</a>
+        <a href="contact.html" class="btn btn-dark btn-lg"><i class="fas fa-phone-alt"></i> Speak to Admissions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       15. COMPREHENSIVE FOOTER
+       ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Col 1: About -->
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-graduation-cap" style="color: var(--clr-gold);"></i> NileBridge University</div>
+          <p>A premier chartered institution delivering high-impact academic education, cutting-edge technology research, and ethical leadership development for Africa and beyond.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div>
+          <h4>Quick Links</h4>
+          <div class="footer-links">
+            <a href="about.html">About Institution</a>
+            <a href="programmes.html">Academic Programmes</a>
+            <a href="admissions.html">Admission Requirements</a>
+            <a href="campuses.html">Campuses & Facilities</a>
+            <a href="faq.html">Frequently Asked Questions</a>
+            <a href="contact.html">Contact Directory</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Faculties -->
+        <div>
+          <h4>Faculties</h4>
+          <div class="footer-links">
+            <a href="programmes.html?faculty=fac-sci-tech">Science & Technology</a>
+            <a href="programmes.html?faculty=fac-biz-mgmt">Business & Management</a>
+            <a href="programmes.html?faculty=fac-health-sci">Health Sciences</a>
+            <a href="programmes.html?faculty=fac-law">Faculty of Law</a>
+            <a href="programmes.html?faculty=fac-humanities">Humanities & Social Sciences</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact & Newsletter -->
+        <div>
+          <h4>Contact Admissions</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-map-marker-alt icon"></i>
+            <span>Plot 14-20 Riverfront Campus, Ggaba Road, Kampala, Uganda</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-phone-alt icon"></i>
+            <span>+256 414 123 456 / +256 800 100 200</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope icon"></i>
+            <span>admissions@nilebridge.edu</span>
+          </div>
+          <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Thank you for subscribing to NileBridge newsletter!');">
+            <input type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 NileBridge University. Chartered by the National Council for Higher Education. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="admin/index.html"><i class="fas fa-lock"></i> Staff / Admin CMS</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms & Conditions</a>
+          <a href="faq.html">Help Desk</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

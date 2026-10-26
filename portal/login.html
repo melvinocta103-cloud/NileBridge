@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Applicant Sign In — NileBridge Admissions Portal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body style="background: #F1F5F9; min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px;">
+
+  <div style="width: 100%; max-width: 480px;">
+    <!-- Logo Header -->
+    <div style="text-align: center; margin-bottom: var(--sp-6);">
+      <a href="../index.html" style="display: inline-flex; align-items: center; gap: 10px; text-decoration: none; color: var(--clr-primary);">
+        <div style="width: 42px; height: 42px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 20px;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span style="font-family: var(--ff-heading); font-size: 22px; font-weight: bold;">NileBridge University</span>
+      </a>
+      <p style="color: var(--clr-text-muted); font-size: var(--fs-sm); margin-top: 4px;">Online Admissions & Applicant Portal</p>
+    </div>
+
+    <!-- Login Card -->
+    <div class="card" style="padding: var(--sp-8); border: 1px solid var(--clr-border); box-shadow: var(--shadow-xl);">
+      <h2 style="font-size: var(--fs-2xl); color: var(--clr-primary); margin-bottom: var(--sp-2);">Applicant Sign In</h2>
+      <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">Access your active application, upload certificates, and track admission status.</p>
+
+      <form id="applicantLoginForm">
+        <div class="form-group" style="margin-bottom: var(--sp-4);">
+          <label class="form-label" for="loginEmail">Email Address</label>
+          <input type="email" id="loginEmail" class="form-control" placeholder="samuel.kintu@example.com" value="samuel.kintu@example.com" required>
+        </div>
+
+        <div class="form-group" style="margin-bottom: var(--sp-4);">
+          <div class="flex-between">
+            <label class="form-label" for="loginPassword">Password</label>
+            <a href="#" style="font-size: var(--fs-xs); color: var(--clr-secondary);" onclick="alert('Password reset link sent to demo email.');">Forgot password?</a>
+          </div>
+          <input type="password" id="loginPassword" class="form-control" value="DemoPass2026!" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg w-full" style="margin-bottom: var(--sp-4);"><i class="fas fa-sign-in-alt"></i> Sign In to Portal</button>
+      </form>
+
+      <!-- Quick Demo Access Helper -->
+      <div style="background: var(--clr-surface); padding: var(--sp-4); border-radius: var(--radius); border: 1px dashed var(--clr-border); text-align: center; margin-top: var(--sp-2);">
+        <span style="font-size: var(--fs-xs); font-weight: bold; color: var(--clr-primary); text-transform: uppercase;">Instant Demo Review:</span>
+        <div style="margin-top: 6px; display: flex; gap: 8px;">
+          <button type="button" id="quickDemoApplicantLogin" class="btn btn-sm btn-outline-accent" style="flex: 1;"><i class="fas fa-user-check"></i> Demo Applicant</button>
+          <a href="../admin/index.html" class="btn btn-sm btn-outline-white" style="background: #1E293B; color: white; flex: 1;"><i class="fas fa-shield"></i> Admin View</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--sp-6); font-size: var(--fs-sm); color: var(--clr-text-muted);">
+        Don't have an application account? <a href="register.html" style="font-weight: bold; color: var(--clr-accent);">Create Account &rarr;</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/portal.js"></script>
+</body>
+</html>

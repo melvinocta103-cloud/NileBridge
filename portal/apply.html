@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Application Wizard (Steps 1–7) — NileBridge Admissions</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body class="portal-body">
+
+  <!-- Portal Header -->
+  <header class="portal-header">
+    <div class="container-fluid">
+      <a href="../index.html" class="portal-brand">
+        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span style="font-family: var(--ff-heading); font-size: 18px; font-weight: bold;">NileBridge</span>
+        <span class="badge-tag">Admissions Wizard</span>
+      </a>
+
+      <div class="portal-user-menu">
+        <div class="user-avatar-badge">SK</div>
+        <div class="hide-mobile">
+          <div class="active-user-name" style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">Samuel Kintu</div>
+        </div>
+        <a href="dashboard.html" class="btn btn-sm btn-outline" style="margin-left: 8px;"><i class="fas fa-arrow-left"></i> Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Wizard Layout -->
+  <div class="container" style="padding-top: var(--sp-8); padding-bottom: var(--sp-12); max-width: 900px;">
+    
+    <div class="wizard-container">
+      <!-- Wizard Stepper Header -->
+      <div class="wizard-header">
+        <div class="flex-between">
+          <h2 style="font-size: var(--fs-xl); color: var(--clr-primary); margin: 0;">Online Application Form</h2>
+          <span style="font-size: var(--fs-xs); color: var(--clr-text-muted);"><i class="fas fa-lock"></i> 256-Bit SSL Encrypted</span>
+        </div>
+
+        <div class="wizard-stepper">
+          <div class="wizard-step-line">
+            <div class="wizard-step-line-progress"></div>
+          </div>
+
+          <div class="wizard-step-item active" data-step="1">
+            <div class="wizard-step-circle">1</div>
+            <span class="wizard-step-label">Personal</span>
+          </div>
+
+          <div class="wizard-step-item" data-step="2">
+            <div class="wizard-step-circle">2</div>
+            <span class="wizard-step-label">Contact</span>
+          </div>
+
+          <div class="wizard-step-item" data-step="3">
+            <div class="wizard-step-circle">3</div>
+            <span class="wizard-step-label">Academic</span>
+          </div>
+
+          <div class="wizard-step-item" data-step="4">
+            <div class="wizard-step-circle">4</div>
+            <span class="wizard-step-label">Programme</span>
+          </div>
+
+          <div class="wizard-step-item" data-step="5">
+            <div class="wizard-step-circle">5</div>
+            <span class="wizard-step-label">Documents</span>
+          </div>
+
+          <div class="wizard-step-item" data-step="6">
+            <div class="wizard-step-circle">6</div>
+            <span class="wizard-step-label">Review</span>
+          </div>
+
+          <div class="wizard-step-item" data-step="7">
+            <div class="wizard-step-circle">7</div>
+            <span class="wizard-step-label">Submit</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wizard Form Steps -->
+      <form id="applicationWizardForm">
+        <div class="wizard-body">
+          
+          <!-- STEP 1: Personal Information -->
+          <div class="wizard-step-content active" data-step="1">
+            <h3 style="font-size: var(--fs-lg); color: var(--clr-primary); margin-bottom: var(--sp-2);">Step 1: Personal Information</h3>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">Please provide your legal names exactly as they appear on your official national ID or passport.</p>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">First / Given Name <span class="required">*</span></label>
+                <input type="text" name="firstName" class="form-control" placeholder="e.g. Samuel" value="Samuel" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Last / Surname <span class="required">*</span></label>
+                <input type="text" name="lastName" class="form-control" placeholder="e.g. Kintu" value="Kintu" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Other / Middle Names</label>
+                <input type="text" name="middleName" class="form-control" placeholder="Optional">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Date of Birth <span class="required">*</span></label>
+                <input type="date" name="dob" class="form-control" value="2005-04-12" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Gender <span class="required">*</span></label>
+                <select name="gender" class="form-control" required>
+                  <option value="Male" selected>Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other / Prefer not to say</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Nationality <span class="required">*</span></label>
+                <input type="text" name="nationality" class="form-control" placeholder="e.g. Ugandan" value="Ugandan" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label">National ID Number (NIN) or Passport Number <span class="required">*</span></label>
+                <input type="text" name="nationalId" class="form-control" placeholder="e.g. CM95028103K2LP" value="CM95028103K2LP" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 2: Contact Information -->
+          <div class="wizard-step-content" data-step="2">
+            <h3 style="font-size: var(--fs-lg); color: var(--clr-primary); margin-bottom: var(--sp-2);">Step 2: Contact Information</h3>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">We will use this information to send admissions updates and official correspondence.</p>
+
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label">Primary Email Address <span class="required">*</span></label>
+                <input type="email" name="email" class="form-control" placeholder="samuel.kintu@example.com" value="samuel.kintu@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Phone / WhatsApp Number <span class="required">*</span></label>
+                <input type="tel" name="phone" class="form-control" placeholder="+256 772 112 334" value="+256 772 112 334" required>
+              </div>
+
+              <div class="form-group full-width">
+                <label class="form-label">Physical Residential Address <span class="required">*</span></label>
+                <input type="text" name="address" class="form-control" placeholder="e.g. Plot 88 Kasanga Hill Road, Kampala" value="Plot 88 Kasanga Hill Road, Kampala" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Emergency Contact Name <span class="required">*</span></label>
+                <input type="text" name="emergencyName" class="form-control" placeholder="e.g. Robert Kintu (Parent)" value="Robert Kintu" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Emergency Contact Phone <span class="required">*</span></label>
+                <input type="tel" name="emergencyPhone" class="form-control" placeholder="+256 701 000 000" value="+256 701 998 877" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 3: Academic Background -->
+          <div class="wizard-step-content" data-step="3">
+            <h3 style="font-size: var(--fs-lg); color: var(--clr-primary); margin-bottom: var(--sp-2);">Step 3: Academic Background</h3>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">Details of your highest secondary school or tertiary qualification.</p>
+
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label class="form-label">Previous Secondary School / University <span class="required">*</span></label>
+                <input type="text" name="previousSchool" class="form-control" placeholder="e.g. King's College Budo" value="King's College Budo" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Index / Registration Number <span class="required">*</span></label>
+                <input type="text" name="indexNumber" class="form-control" placeholder="e.g. U0001/542" value="U0001/542" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Year of Completion <span class="required">*</span></label>
+                <input type="number" name="completionYear" class="form-control" value="2025" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Highest Qualification Attained <span class="required">*</span></label>
+                <select name="qualificationType" class="form-control" required>
+                  <option value="UACE (A-Level)" selected>UACE (A-Level / Advanced Certificate)</option>
+                  <option value="International A-Levels">International A-Levels (Cambridge / Edexcel)</option>
+                  <option value="International Baccalaureate">International Baccalaureate (IB)</option>
+                  <option value="Diploma">Tertiary Diploma</option>
+                  <option value="Bachelor's Degree">Bachelor's Degree (for Master's/MBA)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Grades / Score Summary <span class="required">*</span></label>
+                <input type="text" name="gradesSummary" class="form-control" placeholder="e.g. PCM / 18 Points" value="PCM - 17 Points (Math: A, Physics: B, Chemistry: B)" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 4: Programme Selection -->
+          <div class="wizard-step-content" data-step="4">
+            <h3 style="font-size: var(--fs-lg); color: var(--clr-primary); margin-bottom: var(--sp-2);">Step 4: Programme Selection</h3>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">Choose your desired academic programme, campus, and study mode.</p>
+
+            <div class="form-grid">
+              <div class="form-group full-width">
+                <label class="form-label">Select Degree Programme <span class="required">*</span></label>
+                <select name="programmeId" id="wizardProgrammeSelect" class="form-control" required>
+                  <!-- Populated by JS -->
+                </select>
+                <div style="margin-top: 6px; font-size: var(--fs-xs); color: var(--clr-primary);">
+                  <strong>Estimated Tuition:</strong> <span id="wizardFeePreview" style="color: var(--clr-accent); font-weight: bold;">$1,200 per semester</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Preferred Campus <span class="required">*</span></label>
+                <select name="campus" class="form-control" required>
+                  <option value="Riverfront Main Campus" selected>Riverfront Main Campus (Kampala)</option>
+                  <option value="Kampala City Campus">Kampala City Campus (CBD)</option>
+                  <option value="Jinja Innovation & Tech Park">Jinja Innovation & Tech Park</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Intake Session <span class="required">*</span></label>
+                <select name="intake" class="form-control" required>
+                  <option value="September 2026" selected>September 2026 Intake</option>
+                  <option value="January 2027">January 2027 Intake</option>
+                  <option value="May 2027">May 2027 Intake</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Study Mode <span class="required">*</span></label>
+                <select name="studyMode" class="form-control" required>
+                  <option value="Full-Time" selected>Full-Time (Day)</option>
+                  <option value="Weekend">Weekend</option>
+                  <option value="Evening">Evening</option>
+                  <option value="Online / Blended">Online / Blended</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 5: Document Upload -->
+          <div class="wizard-step-content" data-step="5">
+            <h3 style="font-size: var(--fs-lg); color: var(--clr-primary); margin-bottom: var(--sp-2);">Step 5: Document Upload</h3>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">Upload scanned copies of required documents (PDF, PNG, JPG up to 5MB each).</p>
+
+            <div style="display: flex; flex-direction: column; gap: var(--sp-6);">
+              <!-- Doc 1 -->
+              <div>
+                <label class="form-label">1. Academic Certificate / Results Slip <span class="required">*</span></label>
+                <div class="dropzone">
+                  <i class="fas fa-cloud-arrow-up dropzone-icon"></i>
+                  <div style="font-weight: var(--fw-semibold);">Drag and drop certificate here or click to browse</div>
+                  <div style="font-size: var(--fs-xs); color: var(--clr-text-light);">Supported: PDF, JPG, PNG (Max 5MB)</div>
+                  <input type="file" style="display: none;" accept=".pdf,.png,.jpg,.jpeg">
+                </div>
+                <div class="uploaded-file-item">
+                  <div class="file-info">
+                    <i class="fas fa-file-pdf file-icon"></i>
+                    <div>
+                      <div style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">UACE_Academic_Certificate.pdf</div>
+                      <div style="font-size: var(--fs-xs); color: var(--clr-success);"><i class="fas fa-check"></i> Attached & Verified format</div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-accent">&times; Remove</button>
+                </div>
+              </div>
+
+              <!-- Doc 2 -->
+              <div>
+                <label class="form-label">2. Official Academic Transcript / O-Level Passlip <span class="required">*</span></label>
+                <div class="dropzone">
+                  <i class="fas fa-cloud-arrow-up dropzone-icon"></i>
+                  <div style="font-weight: var(--fw-semibold);">Drag and drop transcript here or click to browse</div>
+                  <input type="file" style="display: none;" accept=".pdf,.png,.jpg,.jpeg">
+                </div>
+                <div class="uploaded-file-item">
+                  <div class="file-info">
+                    <i class="fas fa-file-pdf file-icon"></i>
+                    <div>
+                      <div style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">UCE_Official_Transcript.pdf</div>
+                      <div style="font-size: var(--fs-xs); color: var(--clr-success);"><i class="fas fa-check"></i> Attached & Verified format</div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-accent">&times; Remove</button>
+                </div>
+              </div>
+
+              <!-- Doc 3 -->
+              <div>
+                <label class="form-label">3. Passport Size Photograph & National ID/Passport <span class="required">*</span></label>
+                <div class="dropzone">
+                  <i class="fas fa-cloud-arrow-up dropzone-icon"></i>
+                  <div style="font-weight: var(--fw-semibold);">Drag and drop photo or ID document</div>
+                  <input type="file" style="display: none;" accept=".pdf,.png,.jpg,.jpeg">
+                </div>
+                <div class="uploaded-file-item">
+                  <div class="file-info">
+                    <i class="fas fa-file-image file-icon"></i>
+                    <div>
+                      <div style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">Passport_Photo_2026.jpg</div>
+                      <div style="font-size: var(--fs-xs); color: var(--clr-success);"><i class="fas fa-check"></i> Attached & Verified format</div>
+                    </div>
+                  </div>
+                  <button type="button" class="btn btn-sm btn-outline-accent">&times; Remove</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- STEP 6: Review & Declaration -->
+          <div class="wizard-step-content" data-step="6">
+            <h3 style="font-size: var(--fs-lg); color: var(--clr-primary); margin-bottom: var(--sp-2);">Step 6: Review & Legal Declaration</h3>
+            <p style="font-size: var(--fs-sm); color: var(--clr-text-muted); margin-bottom: var(--sp-6);">Please review your submitted details carefully before final submission.</p>
+
+            <div id="applicationReviewSummary" style="margin-bottom: var(--sp-6);">
+              <!-- Dynamically compiled by JS -->
+            </div>
+
+            <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border); background: #FFFBEB;">
+              <h4 style="color: #B45309; margin-bottom: var(--sp-2);"><i class="fas fa-triangle-exclamation"></i> Applicant Declaration</h4>
+              <p style="font-size: var(--fs-xs); color: var(--clr-text-muted); line-height: 1.6; margin-bottom: var(--sp-4);">
+                I hereby declare that all information and documents supplied in this online application are true, accurate, and complete. I understand that any false or withheld information will result in immediate disqualification or revocation of admission.
+              </p>
+              <label style="display: flex; align-items: center; gap: 8px; font-size: var(--fs-sm); font-weight: var(--fw-semibold); cursor: pointer;">
+                <input type="checkbox" name="declarationAccepted" required checked>
+                I accept and agree to the institutional admissions terms and conditions.
+              </label>
+            </div>
+          </div>
+
+          <!-- STEP 7: Submission Confirmation -->
+          <div class="wizard-step-content" data-step="7">
+            <div style="text-align: center; padding: var(--sp-8) var(--sp-4);">
+              <div style="width: 80px; height: 80px; border-radius: 50%; background: #ECFDF5; color: #10B981; display: flex; align-items: center; justify-content: center; font-size: 38px; margin: 0 auto var(--sp-4); box-shadow: 0 0 0 10px rgba(16, 185, 129, 0.15);">
+                <i class="fas fa-check"></i>
+              </div>
+              <h2 style="font-size: var(--fs-3xl); color: var(--clr-primary); margin-bottom: var(--sp-2);">Application Submitted Successfully!</h2>
+              <p style="color: var(--clr-text-muted); font-size: var(--fs-md); max-width: 540px; margin: 0 auto var(--sp-6);">
+                Your application has been received and queued for review by the NileBridge Admissions Directorate.
+              </p>
+
+              <div style="background: var(--clr-surface); border: 2px dashed var(--clr-secondary); padding: var(--sp-6); border-radius: var(--radius-lg); max-width: 480px; margin: 0 auto var(--sp-8);">
+                <div style="font-size: var(--fs-xs); text-transform: uppercase; color: var(--clr-text-light);">Your Official Application Reference:</div>
+                <div id="confirmedAppNumber" style="font-family: var(--ff-heading); font-size: var(--fs-2xl); font-weight: bold; color: var(--clr-secondary); margin: 6px 0;">APP-2026-000123</div>
+                <div style="font-size: var(--fs-xs); color: var(--clr-text-muted);">A confirmation notification and copy of your submission has been emailed to your address.</div>
+              </div>
+
+              <div style="display: flex; justify-content: center; gap: var(--sp-4); flex-wrap: wrap;">
+                <a href="status.html" class="btn btn-primary btn-lg"><i class="fas fa-timeline"></i> Track Live Status</a>
+                <a href="dashboard.html" class="btn btn-outline btn-lg"><i class="fas fa-gauge-high"></i> Go to Dashboard</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Wizard Navigation Buttons -->
+        <div class="wizard-footer">
+          <button type="button" id="wizardPrevBtn" class="btn btn-outline" style="display: none;"><i class="fas fa-arrow-left"></i> Previous</button>
+          <button type="button" id="wizardSaveDraftBtn" class="btn btn-ghost"><i class="fas fa-floppy-disk"></i> Save Incomplete Draft</button>
+          <button type="button" id="wizardNextBtn" class="btn btn-primary">Continue <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/portal.js"></script>
+</body>
+</html>

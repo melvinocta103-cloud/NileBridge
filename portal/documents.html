@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Center — NileBridge Admissions Portal</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/portal.css">
+</head>
+<body class="portal-body">
+
+  <!-- Portal Header -->
+  <header class="portal-header">
+    <div class="container-fluid">
+      <a href="../index.html" class="portal-brand">
+        <div style="width: 36px; height: 36px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 6px; display: flex; align-items: center; justify-content: center; color: white;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <span style="font-family: var(--ff-heading); font-size: 18px; font-weight: bold;">NileBridge</span>
+        <span class="badge-tag">Document Center</span>
+      </a>
+
+      <div class="portal-user-menu">
+        <div class="user-avatar-badge">SK</div>
+        <div class="hide-mobile">
+          <div class="active-user-name" style="font-weight: var(--fw-semibold); font-size: var(--fs-sm);">Samuel Kintu</div>
+        </div>
+        <a href="dashboard.html" class="btn btn-sm btn-outline" style="margin-left: 8px;"><i class="fas fa-arrow-left"></i> Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Portal Layout -->
+  <div class="portal-wrapper">
+    <!-- Sidebar -->
+    <aside class="portal-sidebar">
+      <a href="dashboard.html" class="portal-nav-item"><i class="fas fa-gauge-high"></i> Dashboard</a>
+      <a href="apply.html" class="portal-nav-item"><i class="fas fa-wand-magic-sparkles"></i> New Application</a>
+      <a href="status.html" class="portal-nav-item"><i class="fas fa-timeline"></i> Status & Offer Letter</a>
+      <a href="documents.html" class="portal-nav-item active"><i class="fas fa-folder-open"></i> Document Center</a>
+      <a href="notifications.html" class="portal-nav-item"><i class="fas fa-bell"></i> Alerts <span class="badge-count">2</span></a>
+      <div style="margin-top: auto; padding-top: var(--sp-4); border-top: 1px solid var(--clr-border);">
+        <a href="../index.html" class="portal-nav-item"><i class="fas fa-arrow-left"></i> Return to Website</a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="portal-main">
+      <div class="flex-between" style="margin-bottom: var(--sp-6); flex-wrap: wrap; gap: 12px;">
+        <div>
+          <h1 style="font-size: var(--fs-2xl); color: var(--clr-primary); margin-bottom: 4px;">Uploaded Verification Documents</h1>
+          <p style="font-size: var(--fs-sm); color: var(--clr-text-muted);">Manage academic credentials and identity documents submitted for verification.</p>
+        </div>
+        <button class="btn btn-primary btn-sm" onclick="alert('Select document to upload (PDF, PNG, JPG).');"><i class="fas fa-upload"></i> Upload Extra Document</button>
+      </div>
+
+      <!-- Document Table Card -->
+      <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border); overflow-x: auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Document Name</th>
+              <th>Category</th>
+              <th>Uploaded Date</th>
+              <th>Verification Status</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="portalDocumentsList">
+            <!-- Populated by JS -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Guidelines Note -->
+      <div class="card" style="padding: var(--sp-6); border: 1px solid var(--clr-border); margin-top: var(--sp-8); background: var(--clr-surface);">
+        <h4 style="color: var(--clr-primary); margin-bottom: var(--sp-2);"><i class="fas fa-circle-info"></i> Document Verification Guidelines</h4>
+        <ul style="list-style: disc; padding-left: 20px; font-size: var(--fs-sm); color: var(--clr-text-muted); line-height: 1.8;">
+          <li>All uploaded transcripts and certificates must be legible color scans of the original or certified true copies.</li>
+          <li>Incomplete or blurred documents marked as <span class="status-badge rejected">NEEDS REUPLOAD</span> must be replaced within 5 working days.</li>
+          <li>For questions regarding verification, email the Academic Registrar at <a href="mailto:registry@nilebridge.edu" style="color: var(--clr-secondary);">registry@nilebridge.edu</a>.</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/data.js"></script>
+  <script src="../js/portal.js"></script>
+</body>
+</html>

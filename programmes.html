@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Programmes Catalogue — NileBridge University</title>
+  <meta name="description" content="Search and discover 45+ accredited undergraduate, postgraduate, and diploma degrees at NileBridge University. Compare fees, study modes, and requirements.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <a href="tel:+256414123456"><i class="fas fa-phone-alt"></i> +256 414 123 456</a>
+        <a href="mailto:admissions@nilebridge.edu"><i class="fas fa-envelope"></i> admissions@nilebridge.edu</a>
+      </div>
+      <div class="topbar-right">
+        <a href="portal/login.html" style="font-weight: var(--fw-semibold); color: var(--clr-gold);"><i class="fas fa-user-circle"></i> Applicant Portal</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <div style="width: 44px; height: 44px; background: linear-gradient(135deg, var(--clr-primary), var(--clr-secondary)); border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-size: 22px; font-weight: bold;">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">NileBridge</span>
+          <span class="brand-tagline">University</span>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <div class="nav-item"><a href="index.html" class="nav-link">Home</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="faculties.html" class="nav-link">Faculties</a></div>
+        <div class="nav-item"><a href="programmes.html" class="nav-link active">Programmes</a></div>
+        <div class="nav-item"><a href="admissions.html" class="nav-link">Admissions</a></div>
+        <div class="nav-item"><a href="news.html" class="nav-link">News & Events</a></div>
+        <div class="nav-item"><a href="contact.html" class="nav-link">Contact</a></div>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="portal/login.html" class="btn btn-outline btn-sm hide-mobile">Log In</a>
+        <a href="portal/apply.html" class="btn btn-primary btn-sm">Apply Now</a>
+        <div class="hamburger" id="navToggle"><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Academic Programmes</span>
+      </div>
+      <h1>Academic Programme Catalogue</h1>
+      <p>Explore undergraduate, master's, and diploma programmes engineered to launch high-impact careers.</p>
+    </div>
+  </section>
+
+  <!-- Main Catalogue Layout with Filter Sidebar -->
+  <section class="section">
+    <div class="container">
+      <div class="grid-sidebar">
+        <!-- Sidebar Filters -->
+        <aside class="filter-sidebar">
+          <h3><i class="fas fa-sliders"></i> Filter Programmes</h3>
+
+          <div class="filter-group">
+            <label for="catalogSearchInput"><i class="fas fa-search"></i> Search Keyword</label>
+            <input type="text" id="catalogSearchInput" class="form-control" placeholder="e.g. Computer, Law, Nursing...">
+          </div>
+
+          <div class="filter-group">
+            <label for="facultyFilterSelect"><i class="fas fa-university"></i> Faculty</label>
+            <select id="facultyFilterSelect" class="form-control">
+              <option value="">All Faculties</option>
+              <option value="fac-sci-tech">Science & Technology</option>
+              <option value="fac-biz-mgmt">Business & Management</option>
+              <option value="fac-health-sci">Health Sciences</option>
+              <option value="fac-law">Faculty of Law</option>
+              <option value="fac-humanities">Humanities & Social Sciences</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="levelFilterSelect"><i class="fas fa-layer-group"></i> Study Level</label>
+            <select id="levelFilterSelect" class="form-control">
+              <option value="">All Levels</option>
+              <option value="Undergraduate">Undergraduate (Bachelor's)</option>
+              <option value="Postgraduate">Postgraduate (Master's / MBA)</option>
+              <option value="Diploma">Diploma</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label for="sortFilterSelect"><i class="fas fa-sort-amount-down"></i> Sort By</label>
+            <select id="sortFilterSelect" class="form-control">
+              <option value="default">Default / Recommended</option>
+              <option value="fee-asc">Tuition: Low to High</option>
+              <option value="fee-desc">Tuition: High to Low</option>
+              <option value="name-asc">Alphabetical (A - Z)</option>
+            </select>
+          </div>
+
+          <button id="resetFiltersBtn" class="btn btn-outline btn-sm w-full"><i class="fas fa-rotate-left"></i> Reset All Filters</button>
+        </aside>
+
+        <!-- Main Programme Results Grid -->
+        <div>
+          <div class="flex-between" style="margin-bottom: var(--sp-6); background: var(--clr-surface); padding: var(--sp-4) var(--sp-6); border-radius: var(--radius-lg); border: 1px solid var(--clr-border);">
+            <div id="programmeCountDisplay" style="font-weight: var(--fw-semibold); color: var(--clr-primary);">Loading programmes...</div>
+            <div style="font-size: var(--fs-xs); color: var(--clr-text-muted);"><i class="fas fa-calendar-check"></i> September 2026 Admissions Open</div>
+          </div>
+
+          <!-- Cards Grid -->
+          <div class="grid grid-2" id="programmesGrid">
+            <!-- Rendered by JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-name"><i class="fas fa-graduation-cap" style="color: var(--clr-gold);"></i> NileBridge University</div>
+          <p>Delivering high-impact academic education and ethical leadership development across Africa.</p>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="about.html">About Us</a>
+            <a href="programmes.html">Academic Catalog</a>
+            <a href="faculties.html">Faculties</a>
+            <a href="campuses.html">Campuses</a>
+          </div>
+        </div>
+        <div>
+          <h4>Admissions</h4>
+          <div class="footer-links">
+            <a href="admissions.html">Requirements</a>
+            <a href="admissions.html#fees">Fees</a>
+            <a href="portal/apply.html">Apply Online</a>
+          </div>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-envelope"></i> info@nilebridge.edu</p>
+          <p style="font-size: var(--fs-sm); color: rgba(255,255,255,0.7);"><i class="fas fa-phone"></i> +256 414 123 456</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 NileBridge University. Chartered by NCHE. All Rights Reserved.</div>
+        <div class="footer-bottom-links">
+          <a href="admin/index.html">Admin CMS</a>
+          <a href="faq.html">FAQs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Live Catalogue Filtering Logic
+    document.addEventListener('DOMContentLoaded', () => {
+      const searchInput = document.getElementById('catalogSearchInput');
+      const facultySelect = document.getElementById('facultyFilterSelect');
+      const levelSelect = document.getElementById('levelFilterSelect');
+      const sortSelect = document.getElementById('sortFilterSelect');
+      const resetBtn = document.getElementById('resetFiltersBtn');
+      const grid = document.getElementById('programmesGrid');
+      const countDisplay = document.getElementById('programmeCountDisplay');
+
+      // Check URL parameters
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('q')) searchInput.value = urlParams.get('q');
+      if (urlParams.get('faculty')) facultySelect.value = urlParams.get('faculty');
+      if (urlParams.get('level')) levelSelect.value = urlParams.get('level');
+
+      function filterAndRender() {
+        const query = searchInput.value.trim().toLowerCase();
+        const faculty = facultySelect.value;
+        const level = levelSelect.value;
+        const sort = sortSelect.value;
+
+        let results = window.NileBridgeData?.programmes || [];
+
+        if (query) {
+          results = results.filter(p => 
+            p.name.toLowerCase().includes(query) || 
+            p.shortDesc.toLowerCase().includes(query) ||
+            p.facultyName.toLowerCase().includes(query)
+          );
+        }
+
+        if (faculty) {
+          results = results.filter(p => p.facultyId === faculty);
+        }
+
+        if (level) {
+          results = results.filter(p => p.degreeLevel === level);
+        }
+
+        // Sorting
+        if (sort === 'fee-asc') {
+          results.sort((a, b) => a.feeAmount - b.feeAmount);
+        } else if (sort === 'fee-desc') {
+          results.sort((a, b) => b.feeAmount - a.feeAmount);
+        } else if (sort === 'name-asc') {
+          results.sort((a, b) => a.name.localeCompare(b.name));
+        }
+
+        countDisplay.innerText = `Showing ${results.length} Degree Programmes`;
+
+        grid.innerHTML = '';
+        if (!results.length) {
+          grid.innerHTML = `<div style="grid-column: 1 / -1; text-align: center; padding: 40px; background: white; border-radius: 12px; border: 1px solid var(--clr-border);"><p>No programmes match your search criteria.</p><button class="btn btn-primary btn-sm" onclick="document.getElementById('resetFiltersBtn').click()">Reset Filters</button></div>`;
+          return;
+        }
+
+        results.forEach(p => {
+          const detailUrl = p.id === 'prog-bsc-cs' ? 'programme-detail.html' : `programme-detail.html?id=${p.id}`;
+          grid.innerHTML += `
+            <div class="card programme-card">
+              <div class="card-img-wrapper">
+                <img class="card-img" src="${p.image}" alt="${p.name}">
+                ${p.tag ? `<span class="card-badge card-badge-accent" style="position: absolute; top: 12px; right: 12px;">${p.tag}</span>` : ''}
+              </div>
+              <div class="card-body">
+                <span class="card-badge card-badge-primary" style="align-self: flex-start;">${p.degreeLevel}</span>
+                <h3 class="card-title"><a href="${detailUrl}">${p.name}</a></h3>
+                <p class="card-text">${p.shortDesc}</p>
+                <div class="card-details">
+                  <span class="detail-tag"><i class="fas fa-clock"></i> ${p.duration}</span>
+                  <span class="detail-tag"><i class="fas fa-tag"></i> ${p.feePerSemester}/sem</span>
+                  <span class="detail-tag"><i class="fas fa-building"></i> ${p.campus}</span>
+                </div>
+                <div class="card-actions">
+                  <a href="${detailUrl}" class="btn btn-sm btn-outline" style="flex: 1;">Course Details</a>
+                  <a href="portal/apply.html" class="btn btn-sm btn-primary" style="flex: 1;">Apply Now</a>
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      searchInput.addEventListener('input', filterAndRender);
+      facultySelect.addEventListener('change', filterAndRender);
+      levelSelect.addEventListener('change', filterAndRender);
+      sortSelect.addEventListener('change', filterAndRender);
+
+      resetBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        facultySelect.value = '';
+        levelSelect.value = '';
+        sortSelect.value = 'default';
+        filterAndRender();
+      });
+
+      filterAndRender();
+    });
+  </script>
+</body>
+</html>
